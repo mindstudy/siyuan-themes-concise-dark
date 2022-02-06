@@ -10,8 +10,7 @@
 
 
 
-可参考：
-![思源笔记小白入坑指南](https://github.com/mindstudy/siyuan-intro)
+可参考[思源笔记小白入坑指南](https://github.com/mindstudy/siyuan-intro)
 
 
 
