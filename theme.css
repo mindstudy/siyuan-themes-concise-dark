@@ -199,7 +199,7 @@
 }
 
 
-/* 左上角图标 */
+/* 文档树左上角图标 */
 span[data-type="pin"] svg {
     max-height: 10px;
     margin-bottom: -8px;
@@ -283,7 +283,7 @@ li[class~="item--focus"] {
 
 
 /*大纲下级标题计数*/
-.b3-list-item .counter {
+.sy__outline .b3-list-item .counter {
     display: none;
 }
 
@@ -304,6 +304,7 @@ li[data-type="toggle"] .b3-list-item__text {
     font-size: 18px !important;
     font-family: "Charis SIL", FZYouSongS, serif !important;
     font-weight: 500 !important;
+    cursor: default;
 }
 
 
@@ -353,11 +354,7 @@ div[contenteditable="true"]{
 
 /*自动探察已有块名/跨笔记本虚拟引用*/
 span[data-type="virtual-block-ref"]{
-    border-bottom: 0 !important;
-}
-
-span[data-type="virtual-block-ref"]:hover{
-    border-bottom: 1px dashed #666 !important;
+    border-bottom: 1px dashed #999 !important;
 }
 
 
@@ -449,7 +446,7 @@ span[data-type="tag"]{
     color: #C9D1D9 !important;
 }
 
-
+/*
 .block__popover .block__icons::after {
     content: "目标链接：";
     color: #999;
@@ -463,7 +460,7 @@ span[data-type="tag"]{
 .block__popover[style*="left: 21"] .block__icons::after  {
     content: "反向链接：";
 }
-
+*/
 
 /*
 .block__popover span[data-type="block-ref"]::after {
