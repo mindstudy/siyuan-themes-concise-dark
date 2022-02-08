@@ -34,7 +34,7 @@
     --b3-scroll-color: rgba(230, 230, 230, .2);
 
     /* 列表 */
-    --b3-list-hover: #3f4041;
+    --b3-list-hover: #505050;
 
     /* 菜单 */
     --b3-menu-background: #27282a;
@@ -301,13 +301,13 @@ li[data-type="toggle"] .b3-list-item__text {
 /* 文档标题 */
 .protyle-title__input {
     font-size: 28px;
-    font-family: "Charis SIL", FZYouSongS, serif !important;
+    font-family: "Charis SIL", FZYouSongS, "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Segoe UI", serif !important;
 }
 
 /* 文档正文 */
 .protyle-wysiwyg{
     font-size: 15px !important;
-    font-family: "Charis SIL", FZYouSongS, serif !important;
+    font-family: "Charis SIL", FZYouSongS, "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Segoe UI", serif !important;
     font-weight: 500 !important;
     cursor: default;
 }
@@ -382,6 +382,18 @@ div[data-node-index="0"].h2 {
     content: " ...";
     display: inline;
     color: #b88;
+}
+
+
+/* 文档内命名、别名数字位置 */
+.protyle-wysiwyg .protyle-attr {
+    padding-top: 17px;
+}
+
+/* 反向链接数字颜色 */
+.protyle-wysiwyg .protyle-attr--refcount {
+    color: #a87a09;
+    top: 17px;
 }
 
 /* 上级 div[data-type="NodeParagraph"] */
@@ -460,35 +472,48 @@ span[data-type="tag"]{
 
 
 /* 双链建议弹出菜单 */
-.b3-menu {
-    border: 1px solid #666;
-    background-color: #444;
+button.b3-list-item--focus{
+    background-color: #27282a !important;
 }
 
-button.b3-list-item {
-    line-height: 23px;
+button.b3-list-item--focus:hover{
+    background-color: #505050 !important;
 }
 
+button.b3-list-item{
+    border-bottom: 1px dashed #555;
+}
+
+button.b3-list-item,
+button.b3-list-item .fn__flex,
 button .b3-list-item__first {
-    display: inline !important;
-    font-size: 13px;
+    line-height: 20px;
 }
 
-button .b3-list-item__meta,
+button .b3-list-item__first,
 button .b3-list-item__text {
-    display: inline !important;
+    font-size: 13px;
 }
 
 button .b3-list-item__meta {
-    float: left;
-    margin-right: 5px;
     font-size: 13px;
+    color: #666;
+}
+
+button .b3-list-item__text mark {
+    background-color: #666 !important;
+}
+
+button .b3-list-item__meta mark {
+    background-color: transparent !important;
+    color: #666;
 }
 
 /* 目标链接、反向链接弹出菜单 */
+.block__popover .protyle-breadcrumb,
 .block__popover .protyle-wysiwyg,
 .block__popover .protyle-wysiwyg--attr {
-    font-size: 15px !important;
+    font-size: 13px !important;
     padding: 0 16px !important;
 }
 
@@ -498,13 +523,13 @@ button .b3-list-item__meta {
 .block__popover .protyle-wysiwyg .h4,
 .block__popover .protyle-wysiwyg .h5,
 .block__popover .protyle-wysiwyg .h6 {
-    font-size: 15px !important;   
+    font-size: 13px !important;   
     margin: 0 !important;
     color: #ddd;
 }
 
 .block__popover .protyle-wysiwyg [data-node-id] {
-    line-height: 165% !important;
+    line-height: 125% !important;
     padding: 0;
     margin: 0;
 }
@@ -514,7 +539,7 @@ button .b3-list-item__meta {
 }
 
 .block__popover span[data-type="tag"]{
-    font-size: 15px !important;
+    font-size: 13px !important;
     color: #C9D1D9 !important;
 }
 
@@ -592,16 +617,6 @@ button .b3-list-item__meta {
 .block__popover .protyle-attr {
     top: 8px;
     padding-top: 0;
-}
-
-/* 文档内命名、别名数字位置 */
-.protyle-attr {
-    padding-top: 25px;
-}
-/* 反向链接数字颜色 */
-.protyle-attr--refcount {
-    color: #a87a09;
-    top: 25px;
 }
 
 .block__popover .protyle-attr--refcount {
