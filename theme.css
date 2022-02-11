@@ -22,7 +22,7 @@
 
     /* 字体 */
     --b3-font-family: "PingFang SC", "Hiragino Sans GB", "Charis SIL", sans-serif;
-    --b3-font-family-code: "PingFang SC", "Hiragino Sans GB", "Charis SIL", sans-serif;
+    --b3-font-famild my-code: "PingFang SC", "Hiragino Sans GB", "Charis SIL", sans-serif;
     --b3-font-family-graph: mononoki;
     --b3-font-family-emoji: "PingFang SC", "Hiragino Sans GB", "Charis SIL", sans-serif;
     --b3-font-family-math: KaTeX_Math;
@@ -43,14 +43,14 @@
     --b3-tooltips-color: rgba(70, 72, 76, .86);
 
     /* 卡片背景 */
-    --b3-card-error-color: rgb(250, 179, 174);
-    --b3-card-error-background: #362c2c;
-    --b3-card-warning-color: rgb(255, 213, 153);
-    --b3-card-warning-background: #35322d;
-    --b3-card-info-color: rgb(166, 213, 250);
-    --b3-card-info-background: #2c3033;
-    --b3-card-success-color: rgb(183, 223, 185);
-    --b3-card-success-background: #333833;
+    --b3-card-error-color: #ddd;
+    --b3-card-error-background: #585252;
+    --b3-card-warning-color: #ddd;
+    --b3-card-warning-background: #5f5b57;
+    --b3-card-info-color: #ddd;
+    --b3-card-info-background: #52585b;
+    --b3-card-success-color: #ddd;
+    --b3-card-success-background: #585c5b;
 
     /* 自定义文字 */
     --b3-font-color1: var(--b3-card-error-color);
@@ -177,14 +177,12 @@
 
 /* 左边栏 */
 #layouts>.fn__flex-1>.fn__flex-column {
-    background-color: #3f3e3e;
+    background-color: #383838;
 }
 
 .layout__center>.fn__flex-1{
     background-color: #323233;
 }
-
-
 
 /* 文档树图标 */
 .block__logo svg {
@@ -236,6 +234,11 @@ span[aria-label*="最小化"] {
 .dock--vertical,
 #dockRight {
     display: none !important;
+}
+
+/* 已关闭笔记 */
+ul.fn__flex-1 li[data-type="toggle"] {
+    background-color: #3a3d41;
 }
 
 .b3-list--background .b3-list-item--focus:not(.dragover):not(.dragover__top):not(.dragover__bottom) {
@@ -356,15 +359,21 @@ div[data-node-index="0"].h2 {
     font-size: 1.55em !important;
 }
 
+/* 已完成任务列表 */
 .protyle-task--done {
     color: #888;
 }
 
+/* 文字颜色 */
 strong[style*="color1"],
 strong[style*="color2"],
 strong[style*="color3"],
 strong[style*="color4"],
-strong[style*="color5"] {
+strong[style*="color5"],
+strong[style*="color6"],
+strong[style*="color7"],
+strong[style*="color8"],
+strong[style*="color9"] {
     background-color: transparent !important;
     font-weight: normal;
     display: inline-block; 
@@ -380,7 +389,7 @@ mark {
     line-height: 18px;
 }
 
-/* ----------不需要挖空效果，请删除这段代码 Start---------------- */
+/* ----------不需要挖空效果，请删除 Start---------------- */
 /* 修改高亮为挖空效果 */
 .protyle-wysiwyg mark{
     color: transparent;
@@ -391,7 +400,7 @@ mark {
     background-color: transparent;
     transition: color 0.2s ease-in-out;
 }
-/* -------------不需要挖空效果，请删除这段代码 END----------------------------------- */
+/* -------------不需要挖空效果，请删除 END----------------------------------- */
 
 
 .protyle-wysiwyg kbd {
@@ -432,7 +441,6 @@ mark {
     color: #b88;
 }
 
-
 .protyle-wysiwyg [data-node-id][fold="1"]:not(.li) div {
     display: inline;
 }
@@ -441,6 +449,23 @@ mark {
     content: " ...";
     display: inline;
     color: #b88;
+}
+
+/* 有序列表数字背景 */
+.protyle-wysiwyg [data-node-id].li[fold="1"]>.protyle-action:after {
+    background-color: transparent;
+}
+
+.protyle-wysiwyg [data-node-id].li>.protyle-action {
+    color: #ddd;
+}
+
+.protyle-wysiwyg [data-node-id].li>.protyle-action:hover {
+    color: #e4a6a6;
+}
+
+.protyle-wysiwyg [data-node-id].li>.protyle-action:hover:after {
+    opacity: 0;
 }
 
 /* 文档标题命名、别名位置 */
@@ -498,7 +523,7 @@ div[data-type="NodeParagraph"] span[data-type="a"]:before{
 
 
 /*标签*/
-span[data-type="tag"]{
+.protyle-wysiwyg [data-node-id] span[data-type="tag"]{
     font-size: 15px;
     padding: 0 3px 1px 3px;
     border-radius: 5px;
@@ -516,9 +541,14 @@ span[data-type="tag"]{
 /*代码块背景*/
 .protyle-wysiwyg .hljs{
     background-color: #36393b;
-    padding: 10px 20px;
+    margin-left: 5px;
 }
 
+.protyle-linenumber__rows {
+   font-family: "Microsoft YaHei Mono", "Noto Sans", "Roboto", sans-serif;
+   color: #aaa !important;
+   font-weight: 400;
+}
 
 /*嵌入块*/
 .protyle-wysiwyg [data-node-id].render-node[data-type="NodeBlockQueryEmbed"]{
@@ -527,6 +557,11 @@ span[data-type="tag"]{
     box-shadow: 0px 0px 2px 0px #525252;
     background-color: transparent;
     padding: 5px 10px;
+}
+
+.protyle-wysiwyg .protyle-wysiwyg__embed div {
+    background-color: #404142 !important;
+    color: #ddd;
 }
 
 /*超级块*/
@@ -560,6 +595,7 @@ span[data-type="tag"]{
     margin: 0 0 10px 0 !important;
 }
 
+/* 双链建议弹出菜单当前块 */
 .ft__primary {
     color: #3083ac;
     opacity: 0.6;
