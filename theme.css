@@ -21,10 +21,10 @@
     --b3-theme-on-error: #fff;
 
     /* 字体 */
-    --b3-font-family: "PingFang SC", "Hiragino Sans GB", "Charis SIL", sans-serif;
-    --b3-font-famild my-code: "PingFang SC", "Hiragino Sans GB", "Charis SIL", sans-serif;
+    --b3-font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Segoe UI", serif !important;
+    --b3-font-family-code: "Roboto", "Noto Sans", "Microsoft YaHei Mono", "JetBrainsMono-Regular", mononoki, Consolas, "Liberation Mono", Menlo, Courier, monospace, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", "EmojiSymbols", sans-serif; 
     --b3-font-family-graph: mononoki;
-    --b3-font-family-emoji: "PingFang SC", "Hiragino Sans GB", "Charis SIL", sans-serif;
+    --b3-font-family-emoji: "Segoe UI Emoji", "Segoe UI Symbol", "Segoe UI", "Apple Color Emoji", "Twemoji Mozilla", "Noto Color Emoji", "Android Emoji";
     --b3-font-family-math: KaTeX_Math;
 
     /* 线条 */
@@ -42,15 +42,15 @@
     /* 提示 */
     --b3-tooltips-color: rgba(70, 72, 76, .86);
 
-    /* 卡片背景 */
+    /* 超级块、卡片背景 */
     --b3-card-error-color: #ddd;
     --b3-card-error-background: #585252;
     --b3-card-warning-color: #ddd;
-    --b3-card-warning-background: #5f5b57;
+    --b3-card-warning-background: #4e4f31;
     --b3-card-info-color: #ddd;
-    --b3-card-info-background: #52585b;
+    --b3-card-info-background: #45485b;
     --b3-card-success-color: #ddd;
-    --b3-card-success-background: #585c5b;
+    --b3-card-success-background: #4a5b56;
 
     /* 自定义文字 */
     --b3-font-color1: var(--b3-card-error-color);
@@ -296,7 +296,7 @@ li[class~="item--focus"] {
 
 /*大纲块标记*/
 .b3-list-item__graphic {
-    opacity: 0.5;
+    opacity: 0;
     height: 10px;
     margin-right: 0 ;
 }
@@ -314,15 +314,17 @@ li[data-type="toggle"] .b3-list-item__text {
 }
 
 /* 文档标题 */
-.protyle-title__input {
-    font-size: 28px;
-    font-family: "Charis SIL", FZYouSongS, "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Segoe UI", serif !important;
+.protyle-content .protyle-title__input {
+    font-family: "Charis SIL", "FZYouSongS";
+    font-size: 35px;
+    font-weight: 800;
+    margin: 0 0 0 -4px;
 }
 
 /* 文档正文 */
-.protyle-wysiwyg{
+.protyle-content .protyle-wysiwyg {
+    font-family: "Charis SIL", "FZYouSongS";
     font-size: 18px !important;
-    font-family: "Charis SIL", FZYouSongS, "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Segoe UI", serif !important;
     font-weight: 500 !important;
     cursor: default;
 }
@@ -330,6 +332,11 @@ li[data-type="toggle"] .b3-list-item__text {
 .protyle-wysiwyg [data-node-id] {
     padding: 3px 0;
     margin: 9px 0;
+}
+
+/* 超级块警告色 */
+strong[parent-style*="warning-color"] {
+    color: #ddd !important;
 }
 
 /* 被引用的块 */
@@ -389,18 +396,16 @@ mark {
     line-height: 18px;
 }
 
-/* ----------不需要挖空效果，请删除 Start---------------- */
-/* 修改高亮为挖空效果 */
+/* 修改高亮为挖空效果，如不需要请删除 START */
 .protyle-wysiwyg mark{
     color: transparent;
-    transition: color 0.5s ease-in-out;
+    transition: color 0.2s ease-in-out;
 }
 .protyle-wysiwyg [data-node-id] [spellcheck="false"] mark:hover{
     color: var(--b3-protyle-inline-mark-color); 
     background-color: transparent;
-    transition: color 0.2s ease-in-out;
 }
-/* -------------不需要挖空效果，请删除 END----------------------------------- */
+/* 如不需要挖空效果，请删除 END*/
 
 
 .protyle-wysiwyg kbd {
@@ -452,6 +457,10 @@ mark {
 }
 
 /* 有序列表数字背景 */
+.protyle-wysiwyg [data-node-id].li>.protyle-action:after {
+    transition: none;
+}
+
 .protyle-wysiwyg [data-node-id].li[fold="1"]>.protyle-action:after {
     background-color: transparent;
 }
@@ -466,6 +475,7 @@ mark {
 
 .protyle-wysiwyg [data-node-id].li>.protyle-action:hover:after {
     opacity: 0;
+    transition: none;
 }
 
 /* 文档标题命名、别名位置 */
@@ -483,7 +493,7 @@ mark {
 .protyle-attr .protyle-attr--refcount,
 .protyle-wysiwyg .protyle-attr--refcount {
     color: #cc950c;
-    font-family: "Charis SIL", FZYouSongS, "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Segoe UI", serif !important;
+    font-family: var(--b3-font-family-code)
     font-weight: 500;
     top: 16px;
 }
@@ -515,10 +525,19 @@ span[data-type="a"]{
 }
 
 div[data-type="NodeParagraph"] span[data-type="a"]:before{
-   content: "🔗";
-   font-family: "Roboto", "Noto Sans", sans-serif;
-   font-size: 88%;
-   margin-right: 2px;
+   content: "";
+   display: inline-block;
+   background-image: url(link.png);
+   width:30px;
+   height: 30px;
+   background-size: contain;
+   opacity: 0.8;
+   vertical-align: top;
+}
+
+
+.block__popover span[data-type="a"]:before{
+   vertical-align: middle !important;
 }
 
 
@@ -541,11 +560,11 @@ div[data-type="NodeParagraph"] span[data-type="a"]:before{
 /*代码块背景*/
 .protyle-wysiwyg .hljs{
     background-color: #36393b;
-    margin-left: 5px;
+    margin: -2px 0 0 5px;
 }
 
 .protyle-linenumber__rows {
-   font-family: "Microsoft YaHei Mono", "Noto Sans", "Roboto", sans-serif;
+   font-family: var(--b3-font-family-code)
    color: #aaa !important;
    font-weight: 400;
 }
@@ -582,17 +601,21 @@ div[data-type="NodeParagraph"] span[data-type="a"]:before{
     color: #888;
 }
 
+.protyle-content {
+    margin: 0 0 10px 0 !important;
+}
+
+/* 全局搜索窗口 */
+.layout-tab-container>.fn__flex-1>.fn__flex-column[style="height: 100%"]>.fn__flex-column[style*="min-height"] {
+    min-height:auto !important;
+    max-height: 25% !important; 
+}
 
 .block__popover,
 .protyle {
     max-height: none !important;
     min-height: 0 !important;
     height: auto !important;
-}
-
-
-.protyle-content {
-    margin: 0 0 10px 0 !important;
 }
 
 /* 双链建议弹出菜单当前块 */
@@ -644,7 +667,7 @@ button .b3-list-item__meta mark {
 .block__popover .protyle-breadcrumb,
 .block__popover .protyle-wysiwyg,
 .block__popover .protyle-wysiwyg--attr {
-    font-family: "Charis SIL", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Segoe UI", serif !important;
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Segoe UI", serif !important;
     font-size: 13px !important;
     font-weight: normal !important;
     padding: 0 16px !important;
@@ -765,4 +788,9 @@ button .b3-list-item__meta mark {
 /* 弹出锚文字下划线不遮挡 */
 .block__popover div[contenteditable="true"]{
     padding-bottom: 8px;
+}
+
+/* 修正设置面板部分字体被编辑器字体影响 */
+.b3-dialog .fn__flex-column .b3-label__text{
+    font-family: var(--b3-font-family) !important;
 }
