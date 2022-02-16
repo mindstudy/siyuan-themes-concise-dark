@@ -43,14 +43,14 @@
     --b3-tooltips-color: rgba(70, 72, 76, .86);
 
     /* 超级块、卡片背景 */
-    --b3-card-error-color: #ddd;
-    --b3-card-error-background: #585252;
-    --b3-card-warning-color: #ddd;
-    --b3-card-warning-background: #4e4f31;
-    --b3-card-info-color: #ddd;
-    --b3-card-info-background: #45485b;
-    --b3-card-success-color: #ddd;
-    --b3-card-success-background: #4a5b56;
+   --b3-card-error-color: rgb(250, 179, 174);
+    --b3-card-error-background: #280a08;
+    --b3-card-warning-color: rgb(255, 213, 153);
+    --b3-card-warning-background: #2d1b00;
+    --b3-card-info-color: rgb(166, 213, 250);
+    --b3-card-info-background: #051829;
+    --b3-card-success-color: rgb(183, 223, 185);
+    --b3-card-success-background: #0d1f0d;
 
     /* 自定义文字 */
     --b3-font-color1: var(--b3-card-error-color);
@@ -282,7 +282,6 @@ li[class~="item--focus"] {
     background-color: transparent;
 }
 
-
 /*文档区左上角当前文档路径*/
 .layout-tab-container .protyle-background,
 .layout-tab-container .protyle-breadcrumb__bar {
@@ -325,11 +324,6 @@ li[data-type="toggle"] .b3-list-item__text {
     cursor: default;
 }
 
-/* 超级块警告色 */
-strong[parent-style*="warning-color"] {
-    color: #ddd !important;
-}
-
 /* 被引用的块 */
 .protyle-wysiwyg [refcount] {
     
@@ -356,23 +350,6 @@ div[data-type="NodeHeading"]:first-of-type {
 /* 已完成任务列表 */
 .protyle-task--done {
     color: #888;
-}
-
-/* 文字颜色 */
-strong[style*="color1"],
-strong[style*="color2"],
-strong[style*="color3"],
-strong[style*="color4"],
-strong[style*="color5"],
-strong[style*="color6"],
-strong[style*="color7"],
-strong[style*="color8"],
-strong[style*="color9"] {
-    background-color: transparent !important;
-    font-weight: normal;
-    display: inline-block; 
-    height: 1.15em;
-    line-height: 1.15;
 }
 
 mark {
@@ -516,7 +493,6 @@ code {
     top: 20px;
 }
 
-/* 上级 div[data-type="NodeParagraph"] */
 /* 正向链接/目标链接/引用块 */
 span[data-type="block-ref"],
 span[data-type="file-annotation-ref"] {
@@ -528,7 +504,6 @@ span[data-type="file-annotation-ref"] {
 span[data-type="virtual-block-ref"]{
     border-bottom: 1px dashed #999 !important;
 }
-
 
 /*超链接/网址*/
 .protyle-wysiwyg [data-node-id] span[data-type="a"],
@@ -600,6 +575,23 @@ div[data-type="NodeParagraph"] span[data-type="a"]:before{
 /*超级块*/
 .protyle-wysiwyg [data-node-id].sb [data-type="NodeParagraph"]{
     padding: 0 0 0 15px;
+}
+
+/*超级块背景色*/
+div[data-type="NodeSuperBlock"] div[style*="error-color"] {
+    background-color: #585252 !important;
+}
+
+div[data-type="NodeSuperBlock"] div[style*="warning-color"] {
+    background-color: #4e4f31 !important;
+}
+
+div[data-type="NodeSuperBlock"] div[style*="info-color"] {
+    background-color: #45485b !important;
+}
+
+div[data-type="NodeSuperBlock"] div[style*="success-color"] {
+    background-color: #4a5b56 !important;
 }
 
 .protyle-wysiwyg table thead tr {
