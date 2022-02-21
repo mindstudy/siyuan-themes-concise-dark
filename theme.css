@@ -43,42 +43,43 @@
     --b3-tooltips-color: rgba(70, 72, 76, .86);
 
     /* 超级块、卡片背景 */
-   --b3-card-error-color: rgb(250, 179, 174);
-    --b3-card-error-background: #280a08;
+   --b3-card-error-color: #fab3ae;
+    --b3-card-error-background: rgb(253, 236, 234);
     --b3-card-warning-color: rgb(255, 213, 153);
-    --b3-card-warning-background: #2d1b00;
+    --b3-card-warning-background: rgb(255, 244, 229);
     --b3-card-info-color: rgb(166, 213, 250);
-    --b3-card-info-background: #051829;
+   --b3-card-info-background: rgb(232, 244, 253);
     --b3-card-success-color: rgb(183, 223, 185);
-    --b3-card-success-background: #0d1f0d;
+    --b3-card-success-background: rgb(237, 247, 237);
 
     /* 自定义文字 */
-    --b3-font-color1: var(--b3-card-error-color);
-    --b3-font-color2: var(--b3-card-warning-color);
-    --b3-font-color3: var(--b3-card-info-color);
-    --b3-font-color4: var(--b3-card-success-color);
-    --b3-font-color5: var(--b3-theme-on-surface);
-    --b3-font-color6: var(--b3-theme-primary);
-    --b3-font-color7: var(--b3-theme-secondary);
-    --b3-font-color8: var(--b3-theme-error);
-    --b3-font-color9: #f5539e;
-    --b3-font-color10: #944194;
-    --b3-font-color11: #65b84d;
-    --b3-font-color12: #f5822e;
-    --b3-font-color13: var(--b3-theme-background);
-    --b3-font-background1: var(--b3-card-error-background);
-    --b3-font-background2: var(--b3-card-warning-background);
-    --b3-font-background3: var(--b3-card-info-background);
-    --b3-font-background4: var(--b3-card-success-background);
-    --b3-font-background5: var(--b3-theme-surface);
-    --b3-font-background6: var(--b3-theme-primary-light);
-    --b3-font-background7: rgba(217, 211, 215, 0.5);
-    --b3-font-background8: rgba(255, 193, 153, 0.5);
-    --b3-font-background9: rgba(189, 201, 255, 0.5);
-    --b3-font-background10: rgba(239, 218, 251, 0.5);
-    --b3-font-background11: rgba(234, 202, 220, 0.5);
-    --b3-font-background12: rgba(253, 198, 200, 0.5);
-    --b3-font-background13: var(--b3-theme-on-background);
+    --b3-font-color1: #ca4f49;
+    --b3-font-color2: #de7802;
+    --b3-font-color3: #be961e;
+    --b3-font-color4: #5ba121;
+    --b3-font-color5: #549ecf;
+    --b3-font-color6: #5588fd;
+    --b3-font-color7: #a36dad;
+    --b3-font-color8: #e4764a;
+    --b3-font-color9: #d89a3c;
+    --b3-font-color10: #d4b345;
+    --b3-font-color11: #64a775;
+    --b3-font-color12: #71b5ee;
+    --b3-font-color13: #888;
+    --b3-font-background1: #585252;
+    --b3-font-background2:#4e4f31;
+    --b3-font-background3: #45485b;
+    --b3-font-background4: #4a5b56;
+    --b3-font-background5: #7c5f5f;
+    --b3-font-background6: #5a5a83;
+    --b3-font-background7: #57748b;
+    --b3-font-background8: #805f49;
+    --b3-font-background9: #525980;
+    --b3-font-background10: #75538a;
+    --b3-font-background11: #81556e;
+    --b3-font-background12: #794849;
+    --b3-font-background13: #666666;
+
 
     /* 动画效果 */
     --b3-transition: all .15s cubic-bezier(0, 0, .2, 1) 0ms;
@@ -127,12 +128,12 @@
     --b3-protyle-code-background: rgba(240, 246, 252, .15);
 
     /* 所见即所得行内元素颜色 */
-    --b3-protyle-inline-strong-color: #e8eaed;
+    --b3-protyle-inline-strong-color: #dcdee0;
     --b3-protyle-inline-em-color: #e8eaed;
     --b3-protyle-inline-s-color: #e8eaed;
     --b3-protyle-inline-link-color: #8ab4f8;
-    --b3-protyle-inline-mark-background: #69779c;
-    --b3-protyle-inline-mark-color: #e8eaed;
+    --b3-protyle-inline-mark-background: #d6d29d;
+    --b3-protyle-inline-mark-color: #a85c1d;
     --b3-protyle-inline-tag-color: #9aa0a6;
     --b3-protyle-inline-blockref-color: #9876aa;
 
@@ -166,7 +167,7 @@
 
 
 
-/* 日记、同步、主题、多页面前后切换图标 */
+/* 日记、同步、主题、多页面前后切换图标隐藏 */
 #barDailyNote,
 #barSync,
 #barBack,
@@ -327,6 +328,10 @@ li[data-type="toggle"] .b3-list-item__text {
     
 }
 
+.protyle-wysiwyg [data-node-id]:not(.list):hover {
+    background-color: #353d4a;
+}
+
 .protyle-wysiwyg [data-node-id] span[data-type="block-ref"],
 .protyle-wysiwyg [data-node-id] span[data-type="file-annotation-ref"] {
     opacity: 1;
@@ -351,22 +356,26 @@ div[data-type="NodeHeading"]:first-of-type {
 }
 
 mark {
-    background-color: #0f498b;
     padding: 0px;
     display: inline-block; 
+    font-weight: 500;
     height: 18px;
     line-height: 18px;
 }
 
-/* 修改高亮为挖空效果，如不需要请删除 START */
-.protyle-wysiwyg mark{
+/* 修改高亮为挖空效果*/
+.protyle-wysiwyg s{
     color: transparent;
+    background-color: #caa4ac;
     transition: color 0.2s ease-in-out;
+    text-decoration: none;
 }
-.protyle-wysiwyg [data-node-id] [spellcheck="false"] mark:hover{
-    color: var(--b3-protyle-inline-mark-color); 
+
+.protyle-wysiwyg [data-node-id] [spellcheck="false"] s:hover{
+    color: #ddd; 
     background-color: transparent;
-} /* 如不需要挖空效果，请删除 END*/
+    text-decoration: none;
+} /* 挖空效果*/
 
 .protyle-wysiwyg kbd {
     font-size: 96%;
@@ -657,12 +666,55 @@ button .b3-list-item__meta {
 }
 
 button .b3-list-item__text mark {
-    background-color: #666 !important;
+    color: #fff;
+    background-color: #666;
 }
 
 button .b3-list-item__meta mark {
     background-color: transparent !important;
-    color: #666;
+    color: #fff;
+}
+
+/* 字体设置 */
+.protyle-util {
+    background-color: #555 !important;
+}
+
+.b3-button--outline {
+    color: #ccc;
+    border: 1px solid #888;
+}
+
+.b3-color__square[data-type="color"] {
+    box-shadow: none;
+    border: 1px solid #fff;
+    transition: none;
+}
+
+.b3-color__square[data-type="color"]:hover {
+    border: 1px solid #fff;
+}
+
+.b3-color__square[data-type="backgroundColor"] {
+    box-shadow: none;
+    border: 1px solid #fff;
+    transition: none;
+}
+
+.b3-color__square:hover[data-type="backgroundColor"]:hover {
+    border: 1px solid #888;
+}
+
+strong[style*="color1"],
+strong[style*="color2"],
+strong[style*="color3"],
+strong[style*="color4"],
+strong[style*="color5"],
+strong[style*="color6"],
+strong[style*="color7"],
+strong[style*="color8"],
+strong[style*="color9"] {
+    font-weight: 500 !important;
 }
 
 /* 引用块、反向链接弹出菜单 */
@@ -819,3 +871,9 @@ button .b3-list-item__meta mark {
 .b3-dialog .fn__flex-column .b3-label__text{
     font-family: var(--b3-font-family) !important;
 }
+
+/* 隐藏文档树 emoji 图标修改面板 */
+#commonMenu .emojis{
+    display: none !important;
+}
+
