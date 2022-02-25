@@ -21,7 +21,7 @@
     --b3-theme-on-error: #fff;
 
     /* 字体 */
-    --b3-font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Segoe UI", serif !important;
+    --b3-font-family:  "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Segoe UI", serif !important;
     --b3-font-family-code: "Roboto", "Noto Sans", "Microsoft YaHei Mono", "JetBrainsMono-Regular", mononoki, Consolas, "Liberation Mono", Menlo, Courier, monospace, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", "EmojiSymbols", sans-serif; 
     --b3-font-family-graph: mononoki;
     --b3-font-family-emoji: "Segoe UI Emoji", "Segoe UI Symbol", "Segoe UI", "Apple Color Emoji", "Twemoji Mozilla", "Noto Color Emoji", "Android Emoji";
@@ -60,11 +60,11 @@
     --b3-font-color5: #549ecf;
     --b3-font-color6: #5588fd;
     --b3-font-color7: #a36dad;
-    --b3-font-color8: #e4764a;
+    --b3-font-color8: #c27557;
     --b3-font-color9: #d89a3c;
-    --b3-font-color10: #d4b345;
-    --b3-font-color11: #64a775;
-    --b3-font-color12: #71b5ee;
+    --b3-font-color10: #c0a756;
+    --b3-font-color11: #7ea889;
+    --b3-font-color12: #789fbe;
     --b3-font-color13: #888;
     --b3-font-background1: #585252;
     --b3-font-background2:#4e4f31;
@@ -73,11 +73,11 @@
     --b3-font-background5: #7c5f5f;
     --b3-font-background6: #5a5a83;
     --b3-font-background7: #57748b;
-    --b3-font-background8: #805f49;
+    --b3-font-background8: #725039;
     --b3-font-background9: #525980;
     --b3-font-background10: #75538a;
-    --b3-font-background11: #81556e;
-    --b3-font-background12: #794849;
+    --b3-font-background11: #925879;
+    --b3-font-background12: #7e3839;
     --b3-font-background13: #666666;
 
 
@@ -295,9 +295,7 @@ li[class~="item--focus"] {
 
 /*大纲块标记*/
 .b3-list-item__graphic {
-    opacity: 0;
-    height: 10px;
-    margin-right: 0 ;
+    display: none;
 }
 
 /*大纲下级标题计数*/
@@ -320,6 +318,8 @@ li[data-type="toggle"] .b3-list-item__text {
 
 /* 文档正文 */
 .protyle-content .protyle-wysiwyg {
+    font-family: "Charis SIL", FZYouSongS, "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Segoe UI", serif !important;
+    font-size: 18px !important;
     cursor: default;
 }
 
@@ -418,6 +418,10 @@ code {
     font-size: 1em !important;
 }
 
+.protyle-content .protyle-wysiwyg .p[fold="1"] {
+    font-size: 18px !important;
+}
+
 /* 层级标题折叠 */
 .protyle-wysiwyg [data-node-id][fold="1"]:not(.li) {
     color: #ddd;
@@ -502,7 +506,7 @@ code {
 /* 正向链接/目标链接/引用块 */
 span[data-type="block-ref"],
 span[data-type="file-annotation-ref"] {
-    border-bottom: 1px dotted #aaa !important;
+    border-bottom: 1px dotted #888 !important;
     color: #ddd !important;
 }
 
@@ -675,7 +679,7 @@ button .b3-list-item__meta mark {
     color: #fff;
 }
 
-/* 字体设置 */
+/* 字体设置面板 */
 .protyle-util {
     background-color: #555 !important;
 }
@@ -853,6 +857,7 @@ strong[style*="color9"] {
 
 /* 块图标弹出菜单 */
 .tooltip {
+    display: none;
     color: #ccc;
     font-weight: 400;
 }
@@ -876,4 +881,3 @@ strong[style*="color9"] {
 #commonMenu .emojis{
     display: none !important;
 }
-
