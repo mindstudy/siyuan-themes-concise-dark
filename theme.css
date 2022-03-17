@@ -21,7 +21,7 @@
     --b3-theme-on-error: #fff;
 
     /* 字体 */
-    --b3-font-family:  "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Segoe UI", serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", "EmojiSymbols";
+    --b3-font-family:  "PingFang SC", "PingFang TC", "Hiragino Sans GB", "Microsoft Yahei", "Segoe UI", serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", "EmojiSymbols";
     --b3-font-family-code: "Roboto", "Noto Sans", "Microsoft YaHei Mono", "JetBrainsMono-Regular", mononoki, Consolas, "Liberation Mono", Menlo, Courier, monospace, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", "EmojiSymbols", sans-serif; 
     --b3-font-family-graph: mononoki;
     --b3-font-family-emoji: "Segoe UI Emoji", "Segoe UI Symbol", "Segoe UI", "Apple Color Emoji", "Twemoji Mozilla", "Noto Color Emoji", "Android Emoji";
@@ -161,7 +161,7 @@
     mix-blend-mode: screen;
 }
 
-.b3-text-filed::-webkit-calendar-picker-indicator {
+.b3-text-field::-webkit-calendar-picker-indicator {
     filter: invert(1)
 }
 
@@ -264,32 +264,32 @@ ul.fn__flex-1 li[data-type="toggle"] {
     background-color: #3a3d41;
 }
 
-/*最顶部当前文档标题*/
+/*最顶部当前页签标题*/
 #drag {
     color:transparent !important;
 }
 
-/*非当前文档标题*/
+/*非当前页签标题*/
 .item--unupdate, .item {
     font-style: normal !important;
     color: #888 !important;
 }
 
-/*当前文档标题*/
+/*当前页签标题*/
 li[class~="item--focus"] {
     font-style: normal !important;
     color: #ccc !important;
 }
 
+/*当前页签背景*/
 .layout-tab-bar .item {
     box-shadow: none;
 }
-
 .layout-tab-bar .item--focus {
     background-color: #444;
 }
 
-/*文档标题右边关闭按钮*/
+/*页签右边关闭按钮鼠标悬浮显示*/
 .item__close {
     opacity: 10%;
 }
@@ -304,12 +304,11 @@ li[class~="item--focus"] {
     background-color: transparent;
 }
 
-/*文档区左上角当前文档路径*/
+/*隐藏面包屑-文档区左上角当前文档路径*/
 .layout-tab-container .protyle-background,
 .layout-tab-container .protyle-breadcrumb__bar {
     display: none !important;
 }
-
 .layout-tab-container .protyle-breadcrumb .b3-tooltips  {
     opacity: 60% !important;
 }
@@ -347,11 +346,6 @@ li[data-type="toggle"] .b3-list-item__text {
     font-size: 18px !important;
     letter-spacing: 0.02em !important;
     cursor: default;
-}
-
-/* 被引用的块 */
-.protyle-wysiwyg [refcount] {
-    
 }
 
 /* 当前块鼠标浮动高亮背景 */
@@ -1010,7 +1004,7 @@ span[data-type="a"]:hover{
 /*代码块*/
 .protyle-wysiwyg .hljs{
     background-color: #36393b;
-    margin:0 0 0 5px;
+    margin: 0 0 0 5px;
 }
 
 .protyle-linenumber__rows {
@@ -1089,7 +1083,7 @@ div[data-type="NodeSuperBlock"] div[style*="success-color"] {
     background-color: #414040 !important;
 }
 
-.protyle-wysiwyg table tbody tr {
+.protyle-wysiwyg table tbody{
     background-color: #585858;
 }
 
@@ -1482,6 +1476,7 @@ strong[style*="background9"] {
 
 .block__popover .protyle-wysiwyg [data-node-id] [spellcheck="false"]{
     min-height: 0;
+    padding-bottom: 5px;
 }
 
 .block__popover .b3-tooltips__sw::before, 
@@ -1563,7 +1558,7 @@ strong[style*="background9"] {
     margin-top: 1px;
     color: #888;
 }
-.b3-form__icon--small .b3-text-filed {
+.b3-form__icon--small .b3-text-field {
     background-color: transparent !important;
 }
 .b3-list--empty {
