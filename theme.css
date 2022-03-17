@@ -588,6 +588,10 @@ code {
 .block__popover .protyle-wysiwyg [data-subtype="t"] .li {
     min-height: 25px;
 }
+/* 弹出浮窗块引用 */
+.block__popover .protyle-wysiwyg span[data-type="block-ref"] {
+    color: #ccc;
+}
 
 /* 折叠字号统一 */
 .protyle-wysiwyg [data-node-id][fold="1"]:not(.li) {
