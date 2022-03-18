@@ -1243,6 +1243,12 @@ div[data-type="NodeSuperBlock"] div[style*="success-color"] {
 }
 
 /*浮动工具条高亮*/
+.protyle-toolbar {
+    background-color: #616161;
+}
+.protyle-toolbar svg{
+    color: #ddd;
+}
 .protyle-toolbar__item--current {
     color: #d36c6c !important;
 }
