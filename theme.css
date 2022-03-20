@@ -37,7 +37,7 @@
     --b3-list-hover: #505050;
 
     /* 菜单 */
-    --b3-menu-background: #27282a;
+    --b3-menu-background: #47494d;
 
     /* 提示 */
     --b3-tooltips-color: rgba(70, 72, 76, .86);
@@ -258,6 +258,12 @@ span[aria-label*="最小化"] {
     background-color: transparent;
     color: #999;
 }
+/* 文档树新建图标 */
+.file-tree [data-type="new"].b3-list-item__action svg,
+.file-tree [data-type="new"].b3-list-item__action svg:hover{
+    height: 12px;
+    width: 12px;
+}
 
 /* 编辑页面、反链面板反链计数背景 */
 .protyle-content .protyle-attr--refcount.popover__block,
@@ -366,7 +372,7 @@ li[class~="item--focus"] {
 
 /* 文档标题 */
 .protyle-content .protyle-title__input {
-    font-family: "Charis SIL", "Gentium Plus", FZYaSong-M-GBK, var(--b3-font-family);
+    font-family: "Charis SIL", "Gentium Book Plus", "Gentium Plus", FZYaSong-M-GBK, "方正准雅宋 GBK", var(--b3-font-family);
     font-size: 30px;
     font-weight: 500;
     margin: 0 0 0 -4px;
@@ -377,12 +383,10 @@ li[class~="item--focus"] {
 .protyle-content span[data-type="a"]:hover{
     box-shadow: none;
 }
-
 /* 文档正文 */
 .protyle-content .protyle-wysiwyg {
-    font-family: "Charis SIL", "Gentium Plus", "FZYouSongJ GBK 506L", var(--b3-font-family);
+    font-family: "Charis SIL", "Gentium Book Plus", "Gentium Plus", "FZYouSongJ GBK 506L", "方正悠宋 GBK 506L", var(--b3-font-family);
     font-size: 18px !important;
-    letter-spacing: 0.02em !important;
     text-align: justify;
     cursor: default;
 }
@@ -424,10 +428,10 @@ div[data-type="NodeHeading"]:first-of-type {
 }
 
 mark {
+    font-family: serif, "Charis SIL", "Gentium Book Plus", "Gentium Plus", "FZYouSongJ GBK 506L", "方正悠宋 GBK 506L", var(--b3-font-family);
     font-weight: 400;
-    height: 16px;
-    line-height: 16px;
     border-radius: 1px;
+    padding: 1px;
 }
 #searchList mark,
 .sy__backlink mark,
@@ -462,24 +466,22 @@ mark {
 .b3-menu .ft__on-background {
     color: #aaa;
 }
-
 .b3-menu button .b3-list-item__meta,
 .b3-menu button .b3-list-item__meta mark {
     font-size: 13px;
     color: #999;
 }
-
 .b3-menu button .b3-list-item__first+.b3-list-item__meta{
     color: #666;
 }
-
 .b3-menu button .b3-list-item__text mark {
     color: #d15e41;
-    background-color: #27282a;
+    background-color: var(--b3-menu-background);
+    font-family: var(--b3-font-family);
 }
-
 .b3-menu button .b3-list-item__meta mark {
     background-color: transparent !important;
+    font-family: var(--b3-font-family) !important;
 }
 
 /* 双链建议菜单 */
@@ -565,6 +567,9 @@ u {
 code {
     font-family: var(--b3-font-family-code);
     font-weight: 400 !important;
+    font-size: 0.9em !important;
+    padding: 3px !important;
+    background-color: #555 !important;
 }
 
 /* 待办列表 */
@@ -690,7 +695,7 @@ code {
 .protyle-content .protyle-wysiwyg .h6[fold="1"] {
     font-weight: normal;
     line-height: 1.5;
-    font-family: "Charis SIL", "Gentium Plus", FZYaSong-M-GBK, var(--b3-font-family);
+    font-family: "Charis SIL", "Gentium Book Plus", "Gentium Plus", FZYaSong-M-GBK, var(--b3-font-family);
 }
 
 .protyle-content .protyle-wysiwyg .p[fold="1"] {
@@ -917,8 +922,22 @@ code {
 .protyle-wysiwyg [data-node-id][fold="1"].bq code:not(.hljs) {
     background-color: transparent !important;
 }
+.protyle-wysiwyg [data-node-id][fold="1"].bq [data-node-id]:not(.list):hover {
+    opacity: 0;
+}
 
 /* 代码块折叠 */
+[data-type="NodeBlockQueryEmbed"] .protyle-icons {
+    background-color: transparent;
+}
+[data-type="NodeBlockQueryEmbed"] .protyle-icons>span>svg {
+    height: 15px !important;
+    width: 10px !important;
+    color: #cc950c;
+}
+[data-type="NodeBlockQueryEmbed"] .protyle-icons>span:hover {
+    background-color: transparent !important;
+}
 .protyle-wysiwyg [data-node-id][fold="1"]:not(.li).code-block {
     border-radius: 4px;
     background-color: #353d4a !important;
@@ -1023,10 +1042,13 @@ code {
 /* 正向链接/目标链接/引用块 */
 span[data-type="block-ref"],
 span[data-type="file-annotation-ref"] {
-    border-bottom: 1px dotted #888 !important;
+    border-bottom: 1px dotted #eee !important;
     color: #ddd !important;
 }
-
+.block__popover span[data-type="block-ref"],
+.block__popover span[data-type="file-annotation-ref"] {
+    padding-bottom: 3px;
+}
 /*自动探察已有块名/跨笔记本虚拟引用*/
 span[data-type="virtual-block-ref"]{
     border-bottom: 1px dashed #999 !important;
@@ -1045,13 +1067,13 @@ span[data-type="a"]:hover{
 
 /*标签*/
 .protyle-wysiwyg [data-node-id] span[data-type="tag"]{
-    font-size: 0.88em;
+    font-size: 0.9em;
     font-family: var(--b3-font-family);
     font-weight: 400 !important;
     padding: 2px;
     border-radius: 5px;
     border: 0 !important;
-    background: #725757;
+    background: #306294;
     color: #ddd !important;
     transition: none;
 }
@@ -1194,7 +1216,7 @@ div[data-type="NodeSuperBlock"] div[style*="success-color"] {
 #commonMenu .b3-menu__item:nth-of-type(12) .b3-menu__submenu .b3-menu__item:nth-of-type(6) .b3-menu__label:before,
 #commonMenu .b3-menu__item:nth-of-type(13) .b3-menu__submenu .b3-menu__item:nth-of-type(6) .b3-menu__label:before {
     content: "🄰 楷体";
-    font-family: "Charis SIL", "Gentium Plus", FZNewKai-Z03, FZKai-Z03, Kai, SimKai, STKaiti, serif;
+    font-family: "Charis SIL", "Gentium Book Plus", "Gentium Plus", FZNewKai-Z03, "方正新楷体 GBK", Kai, "楷体", SimKai, STKaiti, serif;
     -webkit-text-fill-color: #ccc !important;
     font-weight: normal;
     font-size: 1.1em;
@@ -1205,7 +1227,7 @@ div[data-type="NodeSuperBlock"] div[style*="success-color"] {
 #commonMenu .b3-menu__item:nth-of-type(12) .b3-menu__submenu .b3-menu__item:nth-of-type(7) .b3-menu__label:before,
 #commonMenu .b3-menu__item:nth-of-type(13) .b3-menu__submenu .b3-menu__item:nth-of-type(7) .b3-menu__label:before {
     content: "🄰 仿宋";
-    font-family: "Charis SIL", "Gentium Plus", FZFangSong-Z02, Fangsong, serif;
+    font-family: "Charis SIL", "Gentium Book Plus", "Gentium Plus", FZFangSong-Z02, "方正仿宋 GBK", Fangsong, "仿宋", serif;
     -webkit-text-fill-color: #ccc !important;
     text-shadow: none !important;
     font-size: 1.1em;
@@ -1225,19 +1247,19 @@ div[data-type="NodeSuperBlock"] div[style*="success-color"] {
 
 /*外观菜单设置内容块楷体仿宋*/
 .protyle-wysiwyg [data-node-id][style$="transparent;"] {
-    font-family: "Charis SIL", "Gentium Plus", FZNewKai-Z03, FZKai-Z03, Kai, SimKai, STKaiti, serif !important;
+    font-family: "Charis SIL", "Gentium Book Plus", "Gentium Plus", FZNewKai-Z03, "方正新楷体 GBK", Kai, "楷体", SimKai, STKaiti, serif !important;
     -webkit-text-stroke: 0 !important;
     -webkit-text-fill-color: inherit !important;
     text-shadow: none !important;
 }
 .protyle-wysiwyg [data-node-id][style$="var(--b3-border-color);"] {
-    font-family: "Charis SIL", "Gentium Plus", FZFangSong-Z02, Fangsong, serif !important;
+    font-family: "Charis SIL", "Gentium Book Plus", "Gentium Plus", FZFangSong-Z02, "方正仿宋 GBK", Fangsong, "仿宋", serif !important;
     -webkit-text-stroke: 0 !important;
     -webkit-text-fill-color: inherit !important;
     text-shadow: none !important;
 }
 .protyle-wysiwyg [data-node-id][style$=");"] {
-    font-family: "Charis SIL", "Gentium Plus", FZFangSong-Z02, Fangsong, serif !important;
+    font-family: "Charis SIL", "Gentium Book Plus", "Gentium Plus", FZFangSong-Z02, "方正仿宋 GBK", Fangsong, "仿宋", serif !important;
     -webkit-text-stroke: 0 !important;
     -webkit-text-fill-color: inherit !important;
     text-shadow: none !important;
@@ -1256,7 +1278,7 @@ div[data-type="NodeSuperBlock"] div[style*="success-color"] {
 
 /*浮动工具条镂空*/
 .protyle-wysiwyg strong[style*="text-fill-color"] {
-    font-family: "Charis SIL", "Gentium Plus", FZNewKai-Z03, FZKai-Z03, Kai, SimKai, STKaiti, serif;
+    font-family: "Charis SIL", "Gentium Book Plus", "Gentium Plus", FZNewKai-Z03, "方正新楷体 GBK", Kai, "楷体", SimKai, STKaiti, serif;
     -webkit-text-stroke: 0 !important;
     -webkit-text-fill-color: inherit !important;
     font-weight: normal;
@@ -1264,7 +1286,7 @@ div[data-type="NodeSuperBlock"] div[style*="success-color"] {
 
 /*浮动工具条投影*/
 .protyle-wysiwyg strong[style*="text-shadow"]  {
-    font-family: "Charis SIL", "Gentium Plus", FZFangSong-Z02, Fangsong, serif;
+    font-family: "Charis SIL", "Gentium Book Plus", "Gentium Plus", FZFangSong-Z02, "方正仿宋 GBK", Fangsong, "仿宋", serif;
     text-shadow: none !important;
     font-weight: normal;
 }
@@ -1272,7 +1294,7 @@ div[data-type="NodeSuperBlock"] div[style*="success-color"] {
 /*楷体浮动工具条*/
 button[data-type="style2"]:before {
     content: "楷体";
-    font-family: "Charis SIL", "Gentium Plus", FZNewKai-Z03, FZKai-Z03, Kai, SimKai, STKaiti, serif;
+    font-family: "Charis SIL", "Gentium Book Plus", "Gentium Plus", FZNewKai-Z03, "方正新楷体 GBK", Kai, "楷体", SimKai, STKaiti, serif;
     -webkit-text-fill-color: #fff !important;
     font-weight: normal;
     font-size: 1.1em;
@@ -1283,7 +1305,7 @@ button[data-type="style2"]:before {
 /*仿宋浮动工具条*/
 button[data-type="style4"]:before {
     content: "仿宋";
-    font-family: "Charis SIL", "Gentium Plus", FZFangSong-Z02, Fangsong, serif;
+    font-family: "Charis SIL", "Gentium Book Plus", "Gentium Plus", FZFangSong-Z02, "方正仿宋 GBK", Fangsong, "仿宋", serif;
     text-shadow: none !important;
     font-size: 1.1em;
     margin: 0 0 0 -20px;
@@ -1312,13 +1334,13 @@ button[data-type="style4"]{
 /*内容块、页面块自定义楷体*/
 .protyle-wysiwyg[custom-z="kt"],
 .protyle-wysiwyg [custom-z="kt"] {
-    font-family: "Charis SIL", "Gentium Plus", FZNewKai-Z03, FZKai-Z03, Kai, SimKai, STKaiti, serif !important;
+    font-family: "Charis SIL", "Gentium Book Plus", "Gentium Plus", FZNewKai-Z03, "方正新楷体 GBK", Kai, "楷体", SimKai, STKaiti, serif !important;
 }
 
 /*内容块、页面块自定义仿宋*/
 .protyle-wysiwyg[custom-z="fs"],
 .protyle-wysiwyg [custom-z="fs"] {
-    font-family: "Charis SIL", "Gentium Plus", FZFangSong-Z02, Fangsong, serif !important;
+    font-family: "Charis SIL", "Gentium Book Plus", "Gentium Plus", FZFangSong-Z02, "方正仿宋 GBK", Fangsong, "仿宋", serif !important;
 }
 
 /*浮动窗口文档路径, 以下均与鼠标浮窗相关*/
@@ -1345,6 +1367,7 @@ button[data-type="style4"]{
 
 /* 长文档滚动条 */
 .protyle-scroll.b3-tooltips.b3-tooltips__s{
+    display: none;
     opacity: 0;
 }
 .protyle-scroll.b3-tooltips.b3-tooltips__s:hover{
@@ -1364,7 +1387,7 @@ button[data-type="style4"]{
 }
 /* 双链建议弹出菜单 */
 button.b3-list-item--focus{
-    background-color: #27282a !important;
+    background-color: var(--b3-menu-background);
 }
 button.b3-list-item--focus:hover{
     background-color: #505050 !important;
@@ -1441,6 +1464,20 @@ strong[style*="background7"],
 strong[style*="background8"],
 strong[style*="background9"] {
     font-weight: 500 !important;
+}
+
+strong[style*="background1"],
+strong[style*="background2"],
+strong[style*="background3"],
+strong[style*="background4"],
+strong[style*="background5"],
+strong[style*="background6"],
+strong[style*="background7"],
+strong[style*="background8"],
+strong[style*="background9"] {
+    font-family: serif, "Charis SIL", "Gentium Book Plus", "Gentium Plus", "FZYouSongJ GBK 506L", "方正悠宋 GBK 506L", var(--b3-font-family);
+    border-radius: 1px;
+    padding: 1px;
 }
 
 /* 引用块、反向链接弹出菜单 */
@@ -1556,6 +1593,15 @@ strong[style*="background9"] {
     padding-bottom: 3px !important;
 }
 
+/* iframe 标题右移 */
+.block__popover--move>.block__icons {
+    padding: 0 0 0 10px;
+}
+/* iframe 关闭按钮上移 */
+.block__popover--move span[data-type="close"] svg {
+    margin-bottom:  0;
+}
+
 /* 块图标弹出菜单 */
 .tooltip {
     display: none;
@@ -1594,8 +1640,8 @@ strong[style*="background9"] {
 }
 
 /* 面板折叠箭头 */
-.b3-list-item__arrow,
-.b3-tooltips__nw svg{
+.file-tree .b3-list-item__arrow,
+.file-tree .b3-tooltips__nw svg{
   height: 7px;
   width: 10px;
   color: #999;
