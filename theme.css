@@ -1157,26 +1157,33 @@ code {
     top: 0;
 }
 
-/* 文档内命名、别名计数位置 */
+/* 正文命名、别名计数位置 */
 .protyle-wysiwyg .protyle-attr {
     font-family: var(--b3-font-family-code);
     font-weight: 400;
-    padding-top: 20px;
+    padding-top: 30px;
 }
 
 /* 反向链接计数颜色 */
-.protyle-attr .protyle-attr--refcount,
-.protyle-wysiwyg .protyle-attr--refcount {
+.protyle-attr--refcount {
     color: #cc950c;
     font-family: var(--b3-font-family-code);
     font-weight: 500;
-    top: 16px;
+    top: 30px;
 }
 
-/* 反向链接计数位置调整 */
-.protyle-attr--name+.protyle-attr--refcount,
-.protyle-attr--alias+.protyle-attr--refcount {
-    top: 20px;
+/* 标题区反向链接计数位置调整 */
+.protyle-title .protyle-attr--memo+.protyle-attr--refcount,
+.protyle-title .protyle-attr--name+.protyle-attr--refcount,
+.protyle-title .protyle-attr--alias+.protyle-attr--refcount {
+    top: 16px !important;
+}
+
+/* 正文反向链接计数位置调整 */
+.protyle-wysiwyg  .protyle-attr--memo+.protyle-attr--refcount,
+.protyle-wysiwyg  .protyle-attr--name+.protyle-attr--refcount,
+.protyle-wysiwyg  .protyle-attr--alias+.protyle-attr--refcount {
+    top: 30px !important;
 }
 
 /* 正向链接/目标链接/引用块 */
@@ -1429,6 +1436,25 @@ button[data-type="style4"]{
     max-height: 25% !important;
 }
 
+/* 聚焦模式背景*/
+.protyle-title+[data-doc-type="NodeHeading"],
+.protyle-title+[data-doc-type="NodeParagraph"],
+.protyle-title+[data-doc-type="NodeList"],
+.protyle-title+[data-doc-type="NodeListItem"],
+.protyle-title+[data-doc-type="NodeBlockquote"],
+.protyle-title+[data-doc-type="NodeCodeBlock"],
+.protyle-title+[data-doc-type="NodeHTMLBlock"],
+.protyle-title+[data-doc-type="NodeTable"],
+.protyle-title+[data-doc-type="NodeThematicBreak"],
+.protyle-title+[data-doc-type="NodeBlockQueryEmbed"],
+.protyle-title+[data-doc-type="NodeMathBlock"],
+.protyle-title+[data-doc-type="NodeIFrame"],
+.protyle-title+[data-doc-type="NodeVideo"],
+.protyle-title+[data-doc-type="NodeAudio"],
+.protyle-title+[data-doc-type="NodeSuperBlock"] {
+    background-color: #22242e !important;
+}
+
 .block__popover,
 .block__popover .protyle {
     max-height: none !important;
@@ -1653,19 +1679,22 @@ strong[style*="background9"] {
 
 /* 弹窗命名、别名、反链计数位置 */
 .block__popover .protyle-attr {
-    top: 8px;
-    padding-top: 0;
+    top: 0;
+    padding-top: 4px;
 }
 
-.block__popover .protyle-attr--refcount {
-    top:  0;
+/* 命名别名备注反向链接计数位置调整 */
+.block__popover .protyle-attr--refcount,
+.block__popover .protyle-wysiwyg  .protyle-attr--memo+.protyle-attr--refcount,
+.block__popover .protyle-wysiwyg  .protyle-attr--name+.protyle-attr--refcount,
+.block__popover .protyle-wysiwyg  .protyle-attr--alias+.protyle-attr--refcount {
+    top:  3px !important;
 }
 
 /* 弹出锚文字下划线不遮挡 */
 .block__popover div[contenteditable="true"]{
     padding-bottom: 8px;
 }
-
 .block__popover [data-subtype^="h"] div[contenteditable="true"]{
     padding-bottom: 3px !important;
 }
