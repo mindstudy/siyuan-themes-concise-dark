@@ -391,11 +391,6 @@ li[class~="item--focus"] {
     cursor: default;
 }
 
-/* 聚焦模式背景*/
-.protyle-title+[data-doc-type="NodeHeading"] {
-    background-color: #2a2b30 !important;
-}
-
 /* 当前块鼠标浮动高亮背景 */
 .protyle-wysiwyg [data-node-id]:hover {
     background-color: #2c323d;
@@ -1254,9 +1249,8 @@ span[data-type="a"]:hover{
     background-color: transparent;
     padding: 5px 10px;
 }
-
 .protyle-wysiwyg .protyle-wysiwyg__embed div {
-    background-color: #404142 !important;
+    background-color: transparent !important;
     color: #ddd;
 }
 
