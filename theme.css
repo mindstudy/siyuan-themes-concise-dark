@@ -1087,16 +1087,13 @@ code {
 }
 
 /* 无序列表样式 */
-.protyle-wysiwyg .list[data-subtype="u"]>.li[data-subtype="u"]>.list[data-subtype="u"]>.li[data-subtype="u"]>.protyle-action>svg,
-.protyle-wysiwyg .list[data-subtype="u"]>.li[data-subtype="u"]>.list[data-subtype="u"]>.li[data-subtype="u"]>.list[data-subtype="u"]>.li[data-subtype="u"]>.protyle-action>svg,
-.protyle-wysiwyg .list[data-subtype="u"]>.li[data-subtype="u"]>.list[data-subtype="u"]>.li[data-subtype="u"]>.list[data-subtype="u"]>.li[data-subtype="u"]>.list[data-subtype="u"]>.li[data-subtype="u"]>.protyle-action>svg,
-.protyle-wysiwyg .list[data-subtype="u"]>.li[data-subtype="u"]>.list[data-subtype="u"]>.li[data-subtype="u"]>.list[data-subtype="u"]>.li[data-subtype="u"]>.list[data-subtype="u"]>.li[data-subtype="u"]>.list[data-subtype="u"]>.li[data-subtype="u"]>.protyle-action>svg,
-.protyle-wysiwyg .list[data-subtype="u"]>.li[data-subtype="u"]>.list[data-subtype="u"]>.li[data-subtype="u"]>.list[data-subtype="u"]>.li[data-subtype="u"]>.list[data-subtype="u"]>.li[data-subtype="u"]>.list[data-subtype="u"]>.li[data-subtype="u"]>.list[data-subtype="u"]>.li[data-subtype="u"]>.protyle-action>svg,
-.protyle-wysiwyg .list[data-subtype="u"]>.li[data-subtype="u"]>.list[data-subtype="u"]>.li[data-subtype="u"]>.list[data-subtype="u"]>.li[data-subtype="u"]>.list[data-subtype="u"]>.li[data-subtype="u"]>.list[data-subtype="u"]>.li[data-subtype="u"]>.list[data-subtype="u"]>.li[data-subtype="u"]>.list[data-subtype="u"]>.li[data-subtype="u"]>.protyle-action>svg
-{
+.protyle-action>svg {
     position: absolute;
     left: 0;
-    top:12px;
+    top:2px;
+}
+.block__popover .protyle-action>svg {
+    top:-6px;
 }
 /* 二级无序列表左边样式 */
 .protyle-wysiwyg .list[data-subtype="u"]>.li[data-subtype="u"]>.list[data-subtype="u"]>.li[data-subtype="u"]>.protyle-action>svg{
@@ -1127,10 +1124,6 @@ code {
 .protyle-wysiwyg .list[data-subtype="u"]>.li[data-subtype="u"]>.list[data-subtype="u"]>.li[data-subtype="u"]>.list[data-subtype="u"]>.li[data-subtype="u"]>.list[data-subtype="u"]>.li[data-subtype="u"]>.list[data-subtype="u"]>.li[data-subtype="u"]>.list[data-subtype="u"]>.li[data-subtype="u"]>.list[data-subtype="u"]>.li[data-subtype="u"]>.protyle-action>svg{
     -webkit-mask: url(pics/square-s.svg) no-repeat;
     mask: url(pics/square-s.svg) no-repeat;
-}
-/* 消除浮窗无序列表样式冲突 */
-.block__popover .protyle-wysiwyg .list[data-subtype="u"] .li[data-subtype="u"] .protyle-action svg {
-    width: 32px !important;
 }
 
 /* 有序列表样式预置 */
@@ -1429,6 +1422,7 @@ span[data-type="a"]:hover{
 /*引述块文字*/
 .protyle-wysiwyg .bq {
     color: #bbb !important;
+    background-color: #222 !important;
     padding-left: 10px;
 }
 
@@ -1903,12 +1897,6 @@ strong[style*="background9"] {
     color: #ccc;
 }
 
-.block__popover .protyle-wysiwyg [data-node-id].li>.protyle-action svg {
-    width: 10px;
-    margin-top: -10px;
-    padding: 0;
-}
-
 .block__popover  .fn__flex-1{
     flex: 0 !important;
 }
@@ -2195,7 +2183,7 @@ div[data-key] .b3-dialog__container .fn__flex-column #searchPreview {
 }/*---------搜索窗口改造 end -------------*/
 
 
-/* 自定义属性，列表转化为思维导图START */
+/* 社区老铁Roy-自定义属性，列表转化为思维导图START */
 /*整个导图取消缩进*/
 .protyle-wysiwyg *[custom-f="dt"][data-subtype="u"] .li .list{
     padding: 0px;
@@ -2205,7 +2193,7 @@ div[data-key] .b3-dialog__container .fn__flex-column #searchPreview {
 .protyle-wysiwyg *[custom-f="dt"][data-subtype="u"].list[data-node-index]{
 	width:100%;
 	overflow-x:auto;/*溢出滚动*/
-	padding-bottom:50px;
+	padding-bottom:25px;
 }
 /*子项设偏移调整*/
 .protyle-wysiwyg *[custom-f="dt"][data-subtype="u"] [data-node-id].li>[data-node-id]{
@@ -2233,9 +2221,9 @@ div[data-key] .b3-dialog__container .fn__flex-column #searchPreview {
 	margin-left:-6px;
 	padding:5px 10px;
 	margin-top:2px;
-	background-color:#5d5d5d;
+	background-color:#3f3f3f;
 	border-radius:3px;
-	box-shadow: #0f0f0f1a 0px 0px 0px 1px, #0f0f0f1a 0px 2px 4px;
+	box-shadow: #222 0px 0px 0px 1px, #222 0px 2px 4px;
 	white-space: nowrap;
 }
 /*去除竖线*/
@@ -2256,21 +2244,21 @@ div[data-key] .b3-dialog__container .fn__flex-column #searchPreview {
     content: '';   
     position: absolute;  
 	top: 50%;   
-    border-top:2px solid #89a3e0;    
+    border-top:2px solid #699ad6;    
     width: 20px;  
 	height: 50%;     
 }
 /*上竖线*/
 .protyle-wysiwyg *[custom-f="dt"] .li[data-subtype="u"]::before{   
     bottom: 50%;    
-    border-left:2px solid #89a3e0;   
+    border-left:2px solid #699ad6;   
 }
 /*下竖线*/
 .protyle-wysiwyg *[custom-f="dt"] .li[data-subtype="u"]::after{   
     content: '';   
     position: absolute;  
 	bottom: 50%;   
-    border-left:2px solid #89a3e0;    
+    border-left:2px solid #699ad6;    
     width: 20px;  
 	height: 50%; 
 }
@@ -2294,7 +2282,7 @@ div[data-key] .b3-dialog__container .fn__flex-column #searchPreview {
 }  
 /*下框线*/
 .protyle-wysiwyg *[custom-f="dt"] .li[data-subtype="u"]:nth-last-child(2)::after{   
-    border-bottom:2px solid #89a3e0!important;    
+    border-bottom:2px solid #699ad6!important;    
     border-radius:0 0 0 5px;    
 }
 /*后继承线*/
@@ -2303,7 +2291,7 @@ div[data-key] .b3-dialog__container .fn__flex-column #searchPreview {
     position: absolute; 
 	left: 0; 
 	top: 50%;   
-    border-top:2px solid #89a3e0;   
+    border-top:2px solid #699ad6;   
     width: 20px; 
 	height: 0;  
 }
@@ -2316,15 +2304,14 @@ div[data-node-index]>[data-type="NodeListItem"][data-subtype="u"]::before{
 .protyle-wysiwyg *[custom-f="dt"][data-subtype="u"] .li div>[spellcheck="false"]:hover, 
 .protyle-wysiwyg *[custom-f="dt"][data-subtype="u"] .li div:hover+.list .li div>[spellcheck="false"]
 {
-	background-color:var(--b3-theme-primary-lightest)!important; 
-	box-shadow: var(--b3-theme-primary) 0px 0px 0px 1px, rgba(15, 15, 15, 0.1) 0px 2px 4px;
+	box-shadow: #aaa 0px 0px 0px 0.03em, #0f0f0f1a 0px 2px 4px;
 }   
 /*继承线高亮*/
 .protyle-wysiwyg *[custom-f="dt"][data-subtype="u"] .li :hover+.list .li::after,    
 .protyle-wysiwyg *[custom-f="dt"][data-subtype="u"] .li :hover+.list .li::before,    
 .protyle-wysiwyg *[custom-f="dt"][data-subtype="u"] .li :hover+.list::after,    
 .protyle-wysiwyg *[custom-f="dt"][data-subtype="u"] .li :hover+.list .list::after{   
-    border-color:var(--b3-theme-primary)!important;    
+    border-color:var(--b3-theme-primary) !important;    
 }
 /* 隐藏列表符号 */
 .list[data-node-id][data-type="NodeList"][custom-f="dt"] .protyle-action {
