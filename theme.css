@@ -432,11 +432,11 @@ li[class~="item--focus"] {
     cursor: default;
 }
 
-/* 当前块鼠标浮动高亮背景 */
+/* 当前块鼠标浮动高亮背景 */ /*
 .protyle-wysiwyg [data-node-id]:hover {
     background-color: var(--b3-theme-primary-lightest);
     color: #d5d5d5;
-}
+} */
 
 .protyle-wysiwyg [data-node-id] span[data-type="block-ref"],
 .protyle-wysiwyg [data-node-id] span[data-type="file-annotation-ref"] {
@@ -2125,9 +2125,16 @@ strong[style*="background9"] {
 [data-treetype="backlink"] svg {
     color: #999;
 }
-
+/* 取消官方折叠变灰 */
 .protyle-wysiwyg [data-node-id][fold="1"]:not(.li):not([data-type="NodeHeading"]) {
     opacity: 1;
+}
+/* 取消官方钉住变窄 */
+.layout-tab-bar .item--pin {
+    flex:auto;
+}
+.layout-tab-bar .item--pin .item__text{
+    color: #70c2fc !important;
 }
 
 /* 自定义属性，列表转化为表格 */
@@ -2341,7 +2348,7 @@ div[data-node-index]>[data-type="NodeListItem"]::before{
 .protyle-wysiwyg *[custom-f="dt"] .li div>[spellcheck="false"]:hover, 
 .protyle-wysiwyg *[custom-f="dt"] .li div:hover+.list .li div>[spellcheck="false"]
 {
-	box-shadow: #aaa 0px 0px 0px 0.03em, #0f0f0f1a 0px 2px 4px;
+	box-shadow: #777 0px 0px 0px 0.03em, #0f0f0f1a 0px 2px 4px;
 }
 [custom-f="dt"] .protyle-linenumber__rows{
     top: 3px;
