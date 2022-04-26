@@ -55,16 +55,16 @@
     --b3-card-success-background: #314931;
 
     /* 自定义文字 */
-    --b3-font-color1: #ca4f49;
-    --b3-font-color2: #de7802;
-    --b3-font-color3: #be961e;
-    --b3-font-color4: #5ba121;
-    --b3-font-color5: #549ecf;
-    --b3-font-color6: #5588fd;
-    --b3-font-color7: #a36dad;
+    --b3-font-color1: #db716c;
+    --b3-font-color2: #be961e;
+    --b3-font-color3: #b7aa24;
+    --b3-font-color4: #54be4d;
+    --b3-font-color5: #68b5fe;
+    --b3-font-color6: #7aa2fd;
+    --b3-font-color7: #b578bf;
     --b3-font-color8: #c27557;
     --b3-font-color9: #d89a3c;
-    --b3-font-color10: #c0a756;
+    --b3-font-color10: #9a843b;
     --b3-font-color11: #7ea889;
     --b3-font-color12: #789fbe;
     --b3-font-color13: #888;
@@ -2259,9 +2259,9 @@ div[data-key] .b3-dialog__container .fn__flex-column #searchPreview {
 	margin-top:2px;
 	background-color:#3f3f3f;
 	border-radius:3px;
-	box-shadow: #222 0px 0px 0px 1px, #222 0px 2px 4px;
+	box-shadow: #222 0px 0px 0px 1px, #0f0f0f1a 0px 1px 2px;
 	white-space: nowrap;
-    z-index: 0;
+    z-index: 1;
 }
 .protyle-wysiwyg *[custom-f="dt"] [data-subtype="t"] .li div>div[spellcheck="false"],
 .protyle-wysiwyg *[custom-f="dt"][data-subtype="t"] .li div>div[spellcheck="false"]{
@@ -2286,7 +2286,7 @@ div[data-key] .b3-dialog__container .fn__flex-column #searchPreview {
 	top: 50%;   
     border-top:2px solid #567dae;    
     width: 20px;  
-	height: 50%;     
+	height: 50%;
 }
 /*上竖线*/
 .protyle-wysiwyg *[custom-f="dt"] .li::before{   
@@ -2337,7 +2337,7 @@ div[data-key] .b3-dialog__container .fn__flex-column #searchPreview {
 	top: 50%;   
     border-top:2px solid #567dae;   
     width: 20px; 
-	height: 0;  
+	height: 0;
 }
 /*取消根目录线*/
 div[data-node-index]>[data-type="NodeListItem"]::after,
