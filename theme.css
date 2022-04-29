@@ -465,7 +465,7 @@ div[data-type="NodeHeading"]:first-of-type {
 .protyle-task--done [data-type="NodeList"] [data-type="NodeListItem"] [data-type="NodeParagraph"]:hover,
 .protyle-task--done,
 .protyle-task--done strong {
-    color: #888;
+    color: #777;
 }
 
 mark {
@@ -2507,5 +2507,28 @@ div[data-node-index]>[data-type="NodeListItem"]::before{
 }
 .protyle-wysiwyg [data-subtype="t"][custom-f~=kb]>[data-subtype="t"]>[data-subtype="t"]>[data-node-id]{
     padding-left: 10px !important;
+}
+.block__popover .protyle-wysiwyg [data-subtype="t"][custom-f~=kb]>[data-subtype="t"]{
+    margin-top: 3px !important;
+}
+.block__popover .protyle-wysiwyg [data-subtype="t"][custom-f~=kb]>.li>.protyle-action{
+    left: -0.05em;
+    top: 0.6em;
+}
+.block__popover .protyle-wysiwyg [data-subtype="t"][custom-f~=kb]>.li>.list>.li  .protyle-action{
+    left: 0em;
+    top: 1.7em;
+}
+.block__popover .protyle-wysiwyg [data-subtype="t"][custom-f~=kb]>.li>.protyle-action+div>[spellcheck="false"]{
+    padding-top: 0.3em !important;
+    padding-bottom: 5px;
+}
+.block__popover .protyle-wysiwyg [data-subtype="t"][custom-f~=kb]>.li>.list>.li [spellcheck="false"]{
+    position: absolute;
+    left: 0.3em;
+    top: 0.25em !important;
+}
+.block__popover .protyle-wysiwyg [data-subtype="t"][custom-f~=kb]>[data-subtype="t"]>[data-subtype="t"]>[data-node-id]{
+    background-color: #444 !important;
 }
 /*列表转化看板 END*/
