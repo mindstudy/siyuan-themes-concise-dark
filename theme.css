@@ -1444,14 +1444,10 @@ span[data-type="a"]:hover{
     background-color: #36393b;
     margin: 0 0 0 5px;
 }
-
 .protyle-linenumber__rows {
    font-family: var(--b3-font-family-code);
    color: #aaa !important;
    font-weight: 400;
-}
-.protyle-linenumber__rows span{
-   height: 1.63em !important;
 }
 
 /*嵌入块*/
