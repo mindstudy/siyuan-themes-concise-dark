@@ -2563,12 +2563,12 @@ div[data-node-index]>[data-type="NodeListItem"]::before{
     border: none;
     background-color: transparent !important;
     margin: 0 5px;
-    font-weight: 500;
 }
 .b3-color__square[data-type="color"][style*="background-color:var(--b3-font-"]:before {
     display: inline-block;
     position: absolute;
-    font-size: 15px;
+    font-size: 1.2em;
+    font-weight:600;
 }
 .b3-color__square[data-type="color"][style="background-color:var(--b3-font-color1)"]:before {
     content: "红";
@@ -2633,6 +2633,7 @@ div[data-node-index]>[data-type="NodeListItem"]::before{
     position: absolute;
     font-size: 14px;
     padding: 1px;
+    font-weight:600;
 }
 .b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background1)"]:before {
     content: "红";
