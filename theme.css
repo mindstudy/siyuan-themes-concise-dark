@@ -473,6 +473,8 @@ mark {
     font-weight: 400;
     border-radius: 1px;
     padding: 1px;
+    background-color: #835012 !important;
+    color: #f7ca96 !important;
 }
 #searchList mark,
 .sy__backlink mark,
@@ -1883,7 +1885,6 @@ strong[style*="background8"],
 strong[style*="background9"] {
     font-weight: 500 !important;
 }
-
 strong[style*="background1"],
 strong[style*="background2"],
 strong[style*="background3"],
@@ -1896,6 +1897,9 @@ strong[style*="background9"] {
     font-family: serif, var(--b3-font-family-text);
     border-radius: 1px;
     padding: 1px;
+}
+strong[style*="background"]:empty{
+    display: none;
 }
 
 /* 引用块、反向链接浮窗背景 */
@@ -2559,6 +2563,7 @@ div[data-node-index]>[data-type="NodeListItem"]::before{
     border: none;
     background-color: transparent !important;
     margin: 0 5px;
+    font-weight: 500;
 }
 .b3-color__square[data-type="color"][style*="background-color:var(--b3-font-"]:before {
     display: inline-block;
