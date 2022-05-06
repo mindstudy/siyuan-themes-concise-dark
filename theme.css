@@ -2,7 +2,7 @@
 
 :root {
     /* 主色 */
-    --b3-theme-primary: #36383c;
+    --b3-theme-primary: #4285f4;
     --b3-theme-primary-light: #4285f48a;
     --b3-theme-primary-lighter: rgba(66, 133, 244, 0.38);
     --b3-theme-primary-lightest: #36383c;
@@ -57,31 +57,43 @@
     /* 自定义文字 */
     --b3-font-color1: #e95851;
     --b3-font-color2: #e98528;
-    --b3-font-color3: #e8c862;
-    --b3-font-color4: #6dbb68;
-    --b3-font-color5: #68b5fe;
-    --b3-font-color6: #7aa2fd;
-    --b3-font-color7: #d380e0;
-    --b3-font-color8: #e3bbd9;
+    --b3-font-color3: #cfb45b;
+    --b3-font-color4: #7abf75;
+    --b3-font-color5: #84c4ff;
+    --b3-font-color6: #97b6ff;
+    --b3-font-color7: #c46bf0;
+    --b3-font-color8: #d7a6cb;
     --b3-font-color9: #ce954a;
     --b3-font-color10: #afa422;
-    --b3-font-color11: #68a5b1;
+    --b3-font-color11: #6db0be;
     --b3-font-color12: #c96202;
-    --b3-font-color13: #888;
-    --b3-font-background1: #880707;
-    --b3-font-background2:#8c503c;
-    --b3-font-background3: #888321;
-    --b3-font-background4: #317662;
-    --b3-font-background5: #4476a5;
-    --b3-font-background6: #46509d;
-    --b3-font-background7: #7c4f82;
-    --b3-font-background8: #a75093;
-    --b3-font-background9: #a34614;
-    --b3-font-background10: #70753b;
-    --b3-font-background11: #3e5a5d;
-    --b3-font-background12: #734747;
-    --b3-font-background13: #525252;
-
+    --b3-font-color13: #a7a7a7;
+    --b3-font-background1: #673838;
+    --b3-font-background2:#61443b;
+    --b3-font-background3: #6b6923;
+    --b3-font-background4: #3a6457;
+    --b3-font-background5: #295472;
+    --b3-font-background6: #35407e;
+    --b3-font-background7: #673f6c;
+    --b3-font-background8: #8c537e;
+    --b3-font-background9: #764f37;
+    --b3-font-background10: #5c6229;
+    --b3-font-background11: #395052;
+    --b3-font-background12: #473d36;
+    --b3-font-background13: #505050;
+    --b3-block-background1: #433232;
+    --b3-block-background2:#433632;
+    --b3-block-background3: #3d3c23;
+    --b3-block-background4: #2a3d37;
+    --b3-block-background5: #2a3843;
+    --b3-block-background6: #2e3249;
+    --b3-block-background7: #432f46;
+    --b3-block-background8: #462e40;
+    --b3-block-background9: #463a33;
+    --b3-block-background10: #383a27;
+    --b3-block-background11: #2a393b;
+    --b3-block-background12: #3e3131;
+    --b3-block-background13: #3c3c3c;
 
     /* 动画效果 */
     --b3-transition: all .15s cubic-bezier(0, 0, .2, 1) 0ms;
@@ -490,19 +502,17 @@ mark {
 .sy__backlink mark,
 #searchList mark{
     padding: 0 0 1px 0 !important;
-    font-size: 1.05em !important;
 }
 #searchList .b3-list-item__meta{
    max-width: 100px;
    white-space:nowrap; 
 }
 #searchPreview [data-type="search-mark"]{
-    font-family: serif, var(--b3-font-family-text);
-    font-size: 1.1em;
+    font-family: var(--b3-font-family-text), serif;
     padding: 0  0 2px 0!important;
 }
 #searchPreview [data-type="NodeHeading"] [data-type="search-mark"]{
-    font-family: serif, var(--b3-font-family-title);
+    font-family: var(--b3-font-family-title). serif;
 }
 .protyle-wysiwyg [data-node-id] span[data-type="search-mark"] {
     padding: 2px 0 4px 0!important;
@@ -1925,12 +1935,49 @@ strong[style*="background6"],
 strong[style*="background7"],
 strong[style*="background8"],
 strong[style*="background9"] {
-    font-family: serif, var(--b3-font-family-text);
+    font-family: var(--b3-font-family-text), serif;
     border-radius: 1px;
-    padding: 1px;
+    color: #ccc;
 }
-strong[style*="background"]:empty{
-    display: none;
+/* 外观菜单背景设置 */
+div[style*="font-color"][style*="background1)"]{
+    background-color: var(--b3-block-background1) !important;
+}
+div[style*="font-color"][style*="background2)"]{
+    background-color: var(--b3-block-background2) !important;
+}
+div[style*="font-color"][style*="background3)"]{
+    background-color: var(--b3-block-background3) !important;
+}
+div[style*="font-color"][style*="background4)"]{
+    background-color: var(--b3-block-background4) !important;
+}
+div[style*="font-color"][style*="background5)"]{
+    background-color: var(--b3-block-background5) !important;
+}
+div[style*="font-color"][style*="background6)"]{
+    background-color: var(--b3-block-background6) !important;
+}
+div[style*="font-color"][style*="background7)"]{
+    background-color: var(--b3-block-background7) !important;
+}
+div[style*="font-color"][style*="background8)"]{
+    background-color: var(--b3-block-background8) !important;
+}
+div[style*="font-color"][style*="background9)"]{
+    background-color: var(--b3-block-background9) !important;
+}
+div[style*="font-color"][style*="background10)"]{
+    background-color: var(--b3-block-background10) !important;
+}
+div[style*="font-color"][style*="background11)"]{
+    background-color: var(--b3-block-background11) !important;
+}
+div[style*="font-color"][style*="background12)"]{
+    background-color: var(--b3-block-background12) !important;
+}
+div[style*="font-color"][style*="background13)"]{
+    background-color: var(--b3-block-background13) !important;
 }
 
 /* 引用块、反向链接浮窗背景 */
@@ -2665,70 +2712,58 @@ div[data-node-index]>[data-type="NodeListItem"]::before{
     font-size: 14px;
     padding: 1px;
     font-weight:600;
+    color: #aaa;
 }
 .b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background1)"]:before {
     content: "红";
-    color: #ddd;
     background-color: var(--b3-font-background1);
 }
 .b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background2)"]:before {
     content: "橙";
-    color: #ddd;
     background-color: var(--b3-font-background2);
 }
 .b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background3)"]:before {
     content: "黄";
-    color: #ddd;
     background-color: var(--b3-font-background3);
 }
 .b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background4)"]:before {
     content: "绿";
-    color: #ddd;
     background-color: var(--b3-font-background4);
 }
 .b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background5)"]:before {
     content: "青";
-    color: #ddd;
     background-color: var(--b3-font-background5);
 }
 .b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background6)"]:before {
     content: "蓝";
-    color: #ddd;
     background-color: var(--b3-font-background6);
 }
 .b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background7)"]:before {
     content: "紫";
-    color: #ddd;
     background-color: var(--b3-font-background7);
 }
 .b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background8)"]:before {
     content: "粉";
-    color: #ddd;
     background-color: var(--b3-font-background8);
 }
 .b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background9)"]:before {
     content: "桔";
-    color: #ddd;
     background-color: var(--b3-font-background9);
 }
 .b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background10)"]:before {
     content: "杏";
-    color: #ddd;
     background-color: var(--b3-font-background10);
 }
 .b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background11)"]:before {
     content: "碧";
-    color: #ddd;
     background-color: var(--b3-font-background11);
 }
 .b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background12)"]:before {
     content: "棕";
-    color: #ddd;
     background-color: var(--b3-font-background12);
 }
 .b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background13)"]:before {
     content: "灰";
-    color: #ddd;
     background-color: var(--b3-font-background13);
 }
 
