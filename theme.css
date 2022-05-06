@@ -2284,6 +2284,7 @@ div[style*="font-color"][style*="background13)"]{
     margin-left: 25px;
 }
 /* 隐藏列表符号 */
+.list[data-node-id][data-type="NodeList"][custom-f="dt"] [data-subtype="u"] .protyle-action,
 .list[data-node-id][data-type="NodeList"][custom-f="bg"] div[data-node-id]:not([data-subtype="t"]) .protyle-action {
    display: none !important;
 }
@@ -2359,6 +2360,7 @@ div[data-key] .b3-dialog__container .fn__flex-column #searchPreview {
 	align-items: center;
 	left:6px;
     margin: 0;
+	flex-shrink:0;/*不压缩宽度*/
 }
 .protyle-wysiwyg *[custom-f="dt"] .li [data-type="NodeHeading"]>[spellcheck="false"]:after{
 	display:none;
@@ -2371,7 +2373,7 @@ div[data-key] .b3-dialog__container .fn__flex-column #searchPreview {
 	background-color:#3f3f3f;
 	border-radius:3px;
 	box-shadow: #222 0px 0px 0px 1px, #0f0f0f1a 0px 1px 2px;
-	white-space: nowrap;
+	/*max-width:20vw; */
     z-index: 1;
 }
 .protyle-wysiwyg *[custom-f="dt"] [data-subtype="t"] .li div>div[spellcheck="false"],
@@ -2451,14 +2453,13 @@ div[data-key] .b3-dialog__container .fn__flex-column #searchPreview {
 	height: 0;
 }
 /*取消根目录线*/
-div[data-node-index]>[data-type="NodeListItem"]::after,
-div[data-node-index]>[data-type="NodeListItem"]::before{   
-	display: none;
+div[custom-f="dt"]>[data-type="NodeListItem"]::after,
+div[custom-f="dt"]>[data-type="NodeListItem"]::before{   
+	display: none !important;
 }  
 /*文本高亮*/
 .protyle-wysiwyg *[custom-f="dt"] .li div>[spellcheck="false"]:hover, 
-.protyle-wysiwyg *[custom-f="dt"] .li div:hover+.list .li div>[spellcheck="false"]
-{
+.protyle-wysiwyg *[custom-f="dt"] .li div:hover+.list .li div>[spellcheck="false"]{
 	box-shadow: #777 0px 0px 0px 0.03em, #0f0f0f1a 0px 2px 4px;
 }
 [custom-f="dt"] .protyle-linenumber__rows{
@@ -2496,6 +2497,7 @@ div[data-node-index]>[data-type="NodeListItem"]::before{
     z-index: 9;
 }
 /* 隐藏列表符号 */
+.list[data-node-id][data-type="NodeList"][custom-f="dt"] [data-subtype="u"] .protyle-action,
 .list[data-node-id][data-type="NodeList"][custom-f="dt"][data-subtype="u"] .protyle-action  {
     opacity: 0;
 }/* 自定义属性，列表转化为思维导图 END */
@@ -2570,6 +2572,20 @@ div[data-node-index]>[data-type="NodeListItem"]::before{
     top: 50%;
     transform: translate(0, -50%);
     border-radius: 3px;
+}
+.protyle-wysiwyg [custom-f~=kb]>.li[data-subtype="u"]>.protyle-action{
+    position: absolute;
+    top: -0.2em;
+    left: 0.18em;
+}
+.protyle-wysiwyg [custom-f~=kb] .li[data-subtype="o"]>.protyle-action--order{
+	display: inline;
+    position: absolute;
+    top: -0.1em;
+    left: 14px;
+}
+.protyle-wysiwyg [custom-f~=kb] .li [spellcheck="false"]{
+	padding-right: 10px;
 }
 .protyle-wysiwyg [data-subtype="t"][custom-f~=kb]>[data-subtype="t"].protyle-task--done>.protyle-action--task::before {
     background-color: transparent;
