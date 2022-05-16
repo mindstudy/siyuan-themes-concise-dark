@@ -219,6 +219,16 @@
 #barForward {
     display: none !important;
 }
+.toolbar__item {
+    padding: 0;
+    top: -2px;
+}
+.toolbar__item svg {
+    width: 12px;
+}
+#barThemeMode svg{
+    color: #458aa7;
+}
 
 /* 左边栏 */
 #layouts>.fn__flex-1>.fn__flex-column {
@@ -247,7 +257,7 @@
 
 /* 文档树及右边图标下移 */
 .block__icons {
-    padding: 0 20px 0 0;
+    padding: 0 32px 0 0;
     background-color: #3a3d41;
 }
 
@@ -387,8 +397,8 @@ li[class~="item--focus"] {
     background-color: transparent;
 }
 .b3-list-item__action svg{
-    width: 12px;
-    height: 12px;
+    width: 11px;
+    height: 11px;
 }
 .b3-tooltips__sw::before,
 .b3-tooltips::before,
@@ -1333,6 +1343,9 @@ code {
     padding-top: 16px;
     top: 0;
 }
+.protyle-title[style$="24px;"] .protyle-attr {
+    margin-right: 10px !important;
+}
 .protyle-title .protyle-attr .protyle-attr--refcount {
     padding-top: 16px;
     top: 0;
@@ -1344,6 +1357,9 @@ code {
     font-weight: 400;
     padding-top: 20px;
     top: 0;
+}
+.protyle-wysiwyg[style$="24px;"]  .protyle-attr {
+    margin-right: 10px !important;
 }
 .protyle-wysiwyg .protyle-attr .protyle-attr--refcount {
     padding-top: unset;
@@ -2497,8 +2513,13 @@ div[data-key] .b3-dialog__container .fn__flex-column #searchPreview {
 #searchList {
     overflow: hidden !important;
 }
-#searchList:hover  {
+#searchList:hover {
     overflow-y: overlay !important;
+}
+.search__arrowdown {
+    top: 23px;
+    left: 60px;
+    width: 9px;
 }
 /*---------搜索窗口改造 end -------------*/
 
