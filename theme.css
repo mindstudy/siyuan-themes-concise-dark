@@ -17,7 +17,7 @@
     --b3-theme-on-primary: #fff;
     --b3-theme-on-secondary: #fff;
     --b3-theme-on-background: #ddd;
-    --b3-theme-on-surface: #9aa0a6;
+    --b3-theme-on-surface: #a7a7a7;
     --b3-theme-on-surface-rgb: 154, 160, 166;
     --b3-theme-on-error: #fff;
 
@@ -385,7 +385,7 @@ li[class~="item--focus"] {
     background-color: #444 !important;
 }
 /*隐藏页签悬浮路径*/ 
-#tooltip[style^="top: 61.9"] {
+#tooltip[style^="top: 67.9"] {
     display: none !important;
 }
 .tooltip,
@@ -786,7 +786,7 @@ code {
 
 /* 弹出浮窗块引用 */
 .block__popover .protyle-wysiwyg span[data-type="block-ref"] {
-    color: #555;
+    color: #ddd !important;
 }
 
 /* 折叠字号统一 */
@@ -1528,6 +1528,9 @@ span[data-type="a"]:hover{
     color: #ddd !important;
     transition: none;
 }
+.block__popover .protyle-wysiwyg [data-node-id] span[data-type="tag"]{
+    font-size: 13px !important;
+}
 
 /*引述块文字*/
 .protyle-wysiwyg .bq {
@@ -1607,6 +1610,15 @@ span[data-type="a"]:hover{
 .protyle-wysiwyg .protyle-wysiwyg__embed div {
     background-color: transparent !important;
     color: #ddd;
+}
+.protyle-wysiwyg .protyle-wysiwyg__embed div.hljs {
+    background-color: #4c4c4c !important;
+}
+.protyle-wysiwyg .protyle-wysiwyg__embed .protyle-linenumber__rows {
+    background-color: #202020 !important;
+}
+.protyle-wysiwyg .protyle-wysiwyg__embed div.bq {
+    background-color: #454343 !important;
 }
 .protyle-wysiwyg__embed .protyle-attr {
     top: -12px !important;
@@ -1724,13 +1736,24 @@ div[data-type="NodeSuperBlock"] div[style*="success-color"] {
 
 /*浮动工具条高亮*/
 .protyle-toolbar {
-    background-color: #616161;
+    column-count: 7;
+    margin-top: -30px;
+    margin-left: -50px;
+    display: block;
+    border: #666 solid 0.05em;
+    background-color: #484848;
+}
+.protyle-toolbar__item{
+    display: block;
 }
 .protyle-toolbar svg{
     color: #ddd;
 }
 .protyle-toolbar__item--current {
     color: #d36c6c !important;
+}
+.protyle-toolbar__divider {
+    display: none;
 }
 
 /*浮动工具条提示*/
@@ -1786,6 +1809,14 @@ button[data-type="style4"]{
     -webkit-text-fill-color: transparent !important;
     -webkit-text-stroke: 0 !important;
     text-shadow: none !important;
+    width: 1px;
+}
+button[data-type="style2"]{
+    margin-right: 25px;
+}
+button[data-type="style2"]+button[data-type="style4"]{
+    margin-left: 22px;
+    margin-right: 5px;
 }
 
 /*  去除字体效果边框 */
@@ -1921,6 +1952,12 @@ button[data-type="style4"]{
     height: fit-content !important;
     z-index: 303;
 }
+.block__popover .block__content {
+    overflow: hidden;
+}
+.block__popover .block__content:hover {
+    overflow-y: overlay !important;
+}
 .block__popover .block__content .protyle {
     max-height: unset !important;
     min-height: 63px !important;
@@ -2009,6 +2046,7 @@ button .b3-list-item__meta {
 
 /* 字体设置面板 */
 .protyle-util {
+    margin-top: 12px;
     background-color: #3e3e3e !important;
 }
 .protyle-util .b3-list-item.b3-list-item--focus{
@@ -2155,7 +2193,7 @@ div[style*="font-color"][style*="background13)"]{
 .block__popover .protyle-wysiwyg [data-node-id] {
     padding: 0;
     margin: 0;
-    color: #ccc;
+    color: #ddd;
 }
 
 .block__popover  .fn__flex-1{
@@ -3185,6 +3223,7 @@ div[custom-f="dt"]>[data-type="NodeListItem"]::before{
 /* 属性窗口 */
 .b3-dialog__container[style="width:50vw"]{
     width:36vw !important;
+    border: #555 solid 0.05em;
 }
 .b3-dialog__container[style="width:50vw"] .b3-dialog__header{
     border-bottom: none;

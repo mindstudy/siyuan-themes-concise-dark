@@ -1,5 +1,17 @@
 # Concise 主题
 
+## 主题效果
+
+![](https://i.imgtg.com/2022/05/16/zwcT6.png)
+
+
+
+![](https://i.imgtg.com/2022/05/16/zwHLG.png)
+
+
+
+![](https://i.imgtg.com/2022/05/16/zwQPD.png)
+
 
 
 ## 特别说明
@@ -28,20 +40,6 @@
   [**《思源笔记双链使用详解》**](https://www.yuque.com/u25584857/ryp75p/tcv57u)
 
   [**《思源笔记外观修改详解》**](https://www.yuque.com/u25584857/ryp75p/sgf58w)
-
-
-
-部分主题效果图：
-
-![](https://i.imgtg.com/2022/05/16/zwcT6.png)
-
-
-
-![](https://i.imgtg.com/2022/05/16/zwHLG.png)
-
-
-
-![](https://i.imgtg.com/2022/05/16/zwQPD.png)
 
 
 
