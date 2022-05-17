@@ -257,7 +257,7 @@
 
 /* 文档树及右边图标下移 */
 .block__icons {
-    padding: 0 32px 0 0;
+    padding: 0 23px 0 0;
     background-color: #3a3d41;
 }
 
@@ -1738,12 +1738,14 @@ div[data-type="NodeSuperBlock"] div[style*="success-color"] {
 .protyle-toolbar {
     column-count: 7;
     margin-top: -30px;
-    margin-left: -50px;
+    margin-left: -25px;
+    padding: 0 10px;
     display: block;
     border: #666 solid 0.05em;
     background-color: #484848;
 }
 .protyle-toolbar__item{
+    padding: 0 !important;
     display: block;
 }
 .protyle-toolbar svg{
@@ -2457,7 +2459,7 @@ div[style*="font-color"][style*="background13)"]{
 }
 /* 集市下载项宽度 */
 .b3-card {
-    width: 260px;
+    width: 250px;
 }
 
 
