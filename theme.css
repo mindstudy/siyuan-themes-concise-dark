@@ -221,10 +221,9 @@
 }
 .toolbar__item {
     padding: 0;
-    top: -2px;
 }
 .toolbar__item svg {
-    width: 12px;
+    width: 11px;
 }
 #barThemeMode svg{
     color: #387088;
@@ -236,7 +235,7 @@
 }
 
 .layout__center>.fn__flex-1{
-    background-color: #323233;
+    background-color: #2f2f2f;
 }
 
 /* 文档树图标 */
@@ -599,10 +598,8 @@ mark {
     opacity: 0.6;
 }
 /* 双链建议弹出菜单 */
-.b3-menu:not(.hint--menu) button.b3-list-item--focus{
-    background-color: var(--b3-menu-background);
-}
 .b3-menu:not(.hint--menu) button.b3-list-item:hover,
+.b3-menu:not(.hint--menu) button.b3-list-item--focus,
 .b3-menu:not(.hint--menu) button.b3-list-item--focus:hover{
     background-color: #333 !important;
 }
@@ -698,10 +695,7 @@ mark {
 
 /* 按/弹出菜单 */
 /* 标题背景 */
-.hint--menu .b3-list-item--focus:not(.dragover):not(.dragover__top):not(.dragover__bottom) {
-    background-color: transparent;
-}
-/* 鼠标浮动文档标题背景 */
+.hint--menu .b3-list-item--focus:not(.dragover):not(.dragover__top):not(.dragover__bottom),
 .hint--menu .b3-list-item:hover:not(.b3-list-item--focus) {
 background-color: #666 !important;
 }
@@ -749,6 +743,11 @@ background-color: #666 !important;
     background-color: transparent;
     text-decoration: none;
     border-bottom:  none;
+}
+
+/* 水平线 */
+.protyle-wysiwyg [data-node-id].hr>div {
+    border-bottom: 0.05em solid #777 !important;
 }
 
 .protyle-wysiwyg kbd {
@@ -1652,14 +1651,8 @@ span[data-type="a"]:hover{
     background-color: transparent;
     padding: 5px 10px;
 }
-.protyle-wysiwyg .protyle-wysiwyg__embed div.hljs {
-    background-color: #4c4c4c !important;
-}
 .protyle-wysiwyg .protyle-wysiwyg__embed .protyle-linenumber__rows {
-    background-color: #202020 !important;
-}
-.protyle-wysiwyg .protyle-wysiwyg__embed div.bq {
-    background-color: #454343 !important;
+    background-color: #292a2d !important;
 }
 .protyle-wysiwyg__embed .protyle-attr {
     top: -12px !important;
@@ -2485,7 +2478,6 @@ div[style*="font-color"][style*="background13)"]{
 .search__header+.fn__flex-1>.b3-tab-container:hover,
 .search__header+.fn__flex-1>[data-name="bazaar"] .fn__flex-1:hover {
     overflow-y: overlay !important;
-    z-index: 9;
 }
 .b3-dialog .item__text{
     padding-right: 32px !important;
