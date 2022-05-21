@@ -2025,7 +2025,6 @@ button[data-type="style2"]+button[data-type="style4"]{
 }
 
 .block__popover {
-    max-height: 600px !important;
     min-height: fit-content !important;
     height: fit-content !important;
     z-index: 303;
@@ -2041,7 +2040,7 @@ button[data-type="style2"]+button[data-type="style4"]{
     min-height: 63px !important;
 }
 .block__popover .block__content .protyle [data-node-id] [spellcheck="false"] {
-    min-height: unset!important;
+    min-height: unset !important;
 }
 .block__popover .block__icons {
     background-color: #464a52;
@@ -2257,7 +2256,7 @@ div[style*="font-color"][style*="background13)"]{
 }
 
 .block__popover .block__edit:not(:last-child) {
-    border-bottom: 1px solid #666;
+    border-bottom: 1px solid #555;
 }
 
 .block__popover span[data-type="tag"]{
