@@ -217,7 +217,7 @@
 }
 
 .layout-tab-bar .item:not(:last-child) {
-    box-shadow: 2px -26px 0px 0px var(--b3-theme-surface),1px -4px 1px 0px rgba(var(--b3-theme-on-surface-rgb), 0.2);
+    box-shadow: 2px -26px 0px 0px #353637, 1px -4px 1px 0px rgba(var(--b3-theme-on-surface-rgb), 0.2);
 }
 
 .layout__wnd--active .layout-tab-bar .item--focus {
@@ -2256,7 +2256,7 @@ div[style*="font-color"][style*="background13)"]{
     flex: 0 !important;
 }
 
-.block__popover .block__edit {
+.block__popover .block__edit:not(:last-child) {
     border-bottom: 1px solid #666;
 }
 
