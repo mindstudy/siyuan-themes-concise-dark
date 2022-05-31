@@ -1865,11 +1865,12 @@ div[data-type="NodeSuperBlock"] div[style*="success-color"] {
 .protyle-toolbar {
     column-count: 7;
     margin-top: -25px;
-    margin-left: -150px !important;
+    margin-left: 52px !important;
     padding: 0 10px;
     display: block;
     border: #666 solid 0.05em;
     background-color: #484848;
+    z-index: 304;
 }
 .protyle-toolbar__item {
     padding: 0 !important;
@@ -2853,6 +2854,15 @@ div[data-key] .b3-dialog__container .search__header .b3-text-field--text {
 }
 #replaceInput {
     margin-right: 18px;
+}
+.spread-search__filter {
+    margin-left: -160px;
+    margin-top: 12px;
+    background-color: #242424;
+    border-radius: 5px;
+    box-shadow: var(--b3-point-shadow);
+    height: fit-content;
+    z-index: 9;
 }
 div[data-key] .b3-dialog__container {
     width: 100vw !important;
