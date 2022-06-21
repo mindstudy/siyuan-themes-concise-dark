@@ -77,7 +77,7 @@
     --b3-font-background3: #6b6923;
     --b3-font-background4: #3a6457;
     --b3-font-background5: #295472;
-    --b3-font-background6: #35407e;
+    --b3-font-background6: #3c5288;
     --b3-font-background7: #673f6c;
     --b3-font-background8: #8c537e;
     --b3-font-background9: #764f37;
@@ -229,7 +229,8 @@
 #barSync,
 #barBack,
 #barDock,
-#barForward {
+#barForward,
+.ft__error  {
     display: none !important;
 }
 .toolbar__item {
@@ -794,10 +795,16 @@ background-color: #3b5160 !important;
 .hint--menu [data-value="sub"],
 .hint--menu [data-value="tag"],
 .hint--menu [data-value="inline-code"],
-.hint--menu [data-value="inline-math"]{
+.hint--menu [data-value="inline-math"],
+.hint--menu [data-value="%60%60%60"] .b3-menu__accelerator{
     display: none;
 }
-
+.hint--menu [data-value="%60%60%60"] .b3-list-item__text:after {
+    content: "```Enter";
+    color: var(--b3-theme-on-surface) !important;
+    font-size: 12px;
+    margin-left: 12px;
+}
 /* 修改删除线为挖空效果*/
 .protyle-wysiwyg s {
     color: transparent;
@@ -1872,7 +1879,7 @@ div[data-type="NodeSuperBlock"] div[style*="success-color"] {
     display: block;
     border: #666 solid 0.05em;
     background-color: #484848;
-    z-index: 304;
+    z-index: 209;
 }
 .protyle-toolbar__item {
     padding: 0 !important;
@@ -2102,7 +2109,7 @@ button[data-type="style2"]+button[data-type="style4"] {
 .block__popover {
     min-height: fit-content !important;
     height: fit-content !important;
-    z-index: 303;
+    z-index: 208;
 }
 .block__popover .block__content {
     overflow: hidden;
