@@ -211,6 +211,7 @@
     src: url('fonts/Font Awesome 6 Brands-Regular-400');
 }
 
+body,
 .toolbar,
 .layout-tab-bar {
     background-color: #353637;
@@ -238,8 +239,12 @@
 #status:hover {
     opacity: 1;
 }
-#status:hover svg{
-    margin-bottom: 30px;
+#status:hover svg {
+    margin-bottom: 30px !important;
+}
+#status:hover .status__counter {
+    margin-top: -25.5px !important;
+    color: #888;
 }
 .ft__error  {
     display: none !important;
@@ -2132,7 +2137,7 @@ button[data-type="style2"]+button[data-type="style4"] {
 .block__popover {
     min-height: fit-content !important;
     height: fit-content !important;
-    z-index: 210;
+    z-index: 209;
 }
 .block__popover .block__content {
     overflow: hidden;
