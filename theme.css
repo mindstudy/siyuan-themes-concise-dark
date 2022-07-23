@@ -1402,7 +1402,6 @@ code {
 .protyle-wysiwyg .list[data-subtype="o"]>.li[data-subtype="o"]>.list[data-subtype="o"]>.li[data-subtype="o"]:before {
     counter-increment: o2;
     content: counter(o2, decimal)")";
-    counter-increment: o2 !important;
 	position: absolute;
 }
 /* 三级有序列表样式 */
@@ -3621,9 +3620,10 @@ div[custom-f="dt"]>[data-type="NodeListItem"]::before {
     border-top: none;
 } /* END - 属性窗口 */
 
-
+/* 由于编辑刷新问题，暂时取消长内容块滚动 */
 /* START - 为长代码块、长嵌入块与长表格添加块内滚动条 from shuoying 萌新的化身*/
 /* 为嵌入块与代码块添加纵向滚动条 */
+/*
 .protyle-wysiwyg [data-node-id][data-type="NodeBlockQueryEmbed"],
 .protyle-wysiwyg div.code-block[data-node-id] {
     overflow: hidden;
@@ -3636,10 +3636,9 @@ div[custom-f="dt"]>[data-type="NodeListItem"]::before {
 .protyle-wysiwyg div.code-block[data-node-id]:hover {
     overflow-y: overlay;
 }
-/* 为表格块添加纵向滚动条 */
 .protyle-wysiwyg [data-node-id][data-type="NodeTable"] table {
     position: relative;
-    overflow:hidden;
+    overflow-y: auto;
     max-height: 72vh;
 }
 .protyle-wysiwyg [data-node-id][data-type="NodeTable"] table:hover {
@@ -3650,5 +3649,6 @@ div[custom-f="dt"]>[data-type="NodeListItem"]::before {
     background-color: var(--b3-theme-background);
     top: -1px;
     z-index: 1;
-} /* END - 为长代码块、长嵌入块与长表格添加块内滚动条 */
+} */
+/* END - 为长代码块、长嵌入块与长表格添加块内滚动条 */
 
